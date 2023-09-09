@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+
+
+
+
+
+
+
+
+
+<meta charset="utf-8">
+<title>검색 | 카카오맵</title>
+
+
+<link href="//t1.daumcdn.net/localimg/localimages/07/common/kakaomap_favicon.ico" rel="shortcut icon">
+
+<meta name="robots" content="noindex">
+
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+
+<meta name="format-detection" content="telephone=no">
+
+
+    <link href="//t1.daumcdn.net/localimg/localimages/07/2018/mw/touchicon/apple-icon-120x120.png" sizes="120x120" rel="apple-touch-icon-precomposed">
+    <link href="//t1.daumcdn.net/localimg/localimages/07/2018/mw/touchicon/apple-icon-180x180.png" sizes="180x180" rel="apple-touch-icon-precomposed">
+
+
+<meta property="og:title" content="카카오맵">
+<meta property="og:site_name" content="카카오맵">
+<meta property="og:description" content="당신을 좋은 곳으로 안내 할 지도">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://t1.daumcdn.net/localimg/localimages/07/common/ogtag.png">
+<meta property="og:url" content="https://m.map.kakao.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="카카오맵">
+<meta name="twitter:description" content="당신을 좋은 곳으로 안내 할 지도">
+<meta name="twitter:image" content="https://t1.daumcdn.net/localimg/localimages/07/common/ogtag.png">
+        <link rel="stylesheet" type="text/css" href="//t1.daumcdn.net/mmapweb/jscss_kakaomap/newmmap.min.202308311330873.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">var xe = xe || {};</script>
+<style>/* 2014-08-21 소셜쉐어 */
+/* 소셜쉐어 공통 */
+.ico_sns_kt {display:block;width:22px;height:22px;margin:5px auto 3px;background-position:0 -76px}
+.ico_sns_ks{display:block;width:22px;height:22px;margin:5px auto 3px;background-position:-26px -76px}
+.ico_sns_twi {display:block;width:22px;height:18px;margin:7px auto 5px;background-position:0 -102px}
+.ico_sns_face {display:block;width:22px;height:22px;margin:5px auto 3px;background-position:-26px -50px}
+.ico_sns_kg {display:block;width:22px;height:22px;margin:5px auto 3px;background-position:0 -128px}
+.ico_sns_mail {display:block;width:20px;height:15px;margin:9px auto 6px;background-position:0 -50px}
+.ico_sns_bd {display:block;width:22px;height:22px;margin:5px auto 3px;background-position:-52px -50px}
+
+.sns_comm {overflow:hidden;position:relative;margin:0 12px;letter-spacing:-1px}
+.sns_comm .basis_sns {height:32px;padding-right:38px;border:1px solid #bbb;border-radius:2px;background-color:#fcfcfc;background-image:-webkit-gradient(linear, left top, left bottom, from(#fff), to(#fcfcfc));background-image:-moz-linear-gradient(top, #fff, #fcfcfc);background-image:-o-linear-gradient(top, #fff, #fcfcfc);background-image:linear-gradient(to bottom, #fff, #fcfcfc)}
+.sns_comm .list_sns {float:left;width:100%}
+.sns_comm .list_sns li {float:left;height:32px}
+.sns_comm .list_sns .link_sns {display:block;overflow:hidden;height:100%;border-right:1px solid #e0e0e0;font-size:0;line-height:0;text-indent:-9999px}
+.sns_comm .list_sns .link_sns:after {display:block;content:''}
+.sns_comm .link_more {position:absolute;top:1px;right:1px;width:38px;height:32px;text-align:center}
+.sns_comm .link_more:after {display:block;content:''}
+.sns_comm .ico_more {width:13px;height:9px;margin-top:12px;background-position:-110px -76px;vertical-align:top}
+.open_sns .link_more .ico_more {background-position:-110px -88px}
+.sns_comm .link_url {position:absolute;top:1px;right:39px;width:60px;height:32px;border-right:1px solid #e0e0e0}
+.sns_comm .link_url:after {display:block;content:''}
+.sns_comm .link_url .txt_url {display:block;margin-top:10px;font-size:13px;line-height:14px;color:#4c546a;vertical-align:top;text-align:center;text-indent:-1px}
+.os_android .sns_comm .link_url .txt_url {margin-top:10px}
+.android .sns_comm .link_url .txt_url {margin-top:9px}
+.sns_comm .link_url .txt_eng {font-weight:bold}
+
+.sns_more {display:none;overflow:hidden;letter-spacing:-1px;clear:both}
+.sns_more .inner_more {float:right;margin:3px 12px 0;border:1px solid #bbb;border-radius:2px}
+.sns_more .btn_close {display:block;padding-right:13px;height:27px;border-top:1px solid #e0e0e0;border-bottom-left-radius:2px;border-bottom-right-radius:2px;font-size:12px;line-height:14px;background-color:#f7f7f7;text-align:right}
+.sns_more .btn_close:after {display:block;content:''}
+.sns_more .ico_close {width:7px;height:7px;margin-top:10px;background-position:-90px -104px;vertical-align:top}
+.sns_more .txt_close {display:inline-block;margin:6px 0 0 4px;vertical-align:top}
+.sns_more .list_snsmore {overflow:hidden}
+.sns_more .list_snsmore li {float:left;height:50px}
+.sns_more .list_snsmore .link_sns {display:block;width:38px;height:48px;padding-top:2px;border-right:1px solid #e0e0e0;font-size:11px;line-height:14px;text-align:center}
+.sns_more .list_snsmore .link_sns:after {display:block;content:''}
+.sns_more .lst .link_sns {border-right:0 none}
+.sns_more .link_sns .txt_url {display:block;margin-top:9px;line-height:14px;vertical-align:top;text-align:center;text-indent:-1px}
+.sns_more .link_sns .txt_eng {display:block;margin-bottom:6px;font-size:13px;line-height:15px;color:#4c546a;font-weight:bold}
+.iphone .link_sns .txt_eng {margin-bottom:6px}
+
+.sns_url {display:none;overflow:hidden;letter-spacing:-1px;clear:both}
+.sns_url .inner_url {position:relative;margin:3px 12px 0;padding:10px 15px 0 13px;height:68px;border:1px solid #bbb;border-radius:2px;background-color:#f7f7f7}
+.sns_url .tf_url {display:block;overflow:hidden;width:100%;height:24px;padding-top:8px;border:1px solid #e0e0e0;border-radius:2px;font-size:15px;line-height:17px;background-color:#fff;text-indent:8px;white-space:nowrap;box-sizing:content-box!important}
+.sns_url .desc_url {float:left;margin-top:10px;font-size:13px;color:#666;line-height:14px;text-indent:2px}
+.os_android .sns_url .desc_url {margin-top:11px}
+.android .sns_url .desc_url {margin-top:9px}
+.sns_url .btn_close {position:absolute;right:0;height:24px;padding:10px 13px 0;font-size:13px;line-height:14px}
+.sns_url .ico_close {width:7px;height:7px;margin-top:4px;background-position:-90px -104px;vertical-align:top}
+.os_android .sns_url .ico_close {margin-top:3px}
+.android .sns_url .ico_close {margin-top:5px}
+.sns_url .txt_close {display:inline-block;margin-left:4px;vertical-align:top}
+
+/* 소셜쉐어 Type A */
+.sns_type1 .list_sns li {width:16.67%}
+.sns_type1 .list_sns li:last-child {overflow:hidden;float:none;width:auto}
+
+/* 소셜쉐어 Type B */
+.sns_type2 {float:right;margin-left:0}
+.sns_type2 .list_sns li {width:39px}
+.sns_type2 .basis_sns {float:right}
+
+/* 소셜쉐어 Type C */
+.sns_type3 {float:left;width:38px;height:34px;margin:0}
+.sns_type3 .link_more {display:block;overflow:hidden;position:static;width:36px;height:32px;border:1px solid #bbb;border-radius:2px;background-color:#f9f9f9;background-image:-webkit-gradient(linear, left top, left bottom, from(#fff), to(#fcfcfc));background-image:-moz-linear-gradient(top, #fff, #fcfcfc);background-image:-o-linear-gradient(top, #fff, #fcfcfc);background-image:linear-gradient(to bottom, #fff, #fcfcfc)}
+.sns_type3 .ico_share {display:inline-block;width:14px;height:14px;margin-top:9px;background-position:-26px -102px;vertical-align:top}
+.sns_type3.open_sns .ico_share {background-position:-52px -102px}
+
+/* 소셜쉐어 Type C1 */
+.sns_type3_1 {float:left;width:38px;height:32px;margin:0}
+.sns_type3_1 .link_more {display:block;overflow:hidden;position:static;width:36px;height:30px;border:1px solid #bbb;border-radius:2px;background-color:#f9f9f9;background-image:-webkit-gradient(linear, left top, left bottom, from(#fff), to(#fcfcfc));background-image:-moz-linear-gradient(top, #fff, #fcfcfc);background-image:-o-linear-gradient(top, #fff, #fcfcfc);background-image:linear-gradient(to bottom, #fff, #fcfcfc)}
+.sns_type3_1 .ico_share {display:inline-block;width:14px;height:14px;margin-top:8px;background-position:-26px -102px;vertical-align:top}
+.sns_type3_1.open_sns .ico_share {background-position:-52px -102px}
+
+/* 소셜쉐어 Type C, C1 공통 */
+.more_type1 .inner_more {overflow:hidden;float:none}
+.more_type1 .list_snsmore {width:100%}
+.more_type1 .list_snsmore li {width:12.67%}
+.more_type1 .list_snsmore .lst {overflow:hidden;float:none;width:auto}
+.more_type1 .list_snsmore .ico_sns_mp {margin-bottom:4px}
+.more_type1 .list_snsmore .link_sns {width:100%;border:0 none;-webkit-box-shadow:inset -1px 0 0 #e0e0e0;box-shadow:inset -1px 0 0 #e0e0e0}
+.more_type1 .lst .link_sns {box-shadow:none}
+.more_type1 .link_sns .txt_url {text-indent:0}
+
+/* 소셜쉐어 Type D (레이어형) */
+.img_social {display:block;overflow:hidden;background:url(https://m1.daumcdn.net/svc/image/U03/common_icon/53F5A1F00260E50001) no-repeat 0 0;text-indent:-9999px}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 1.5dppx)	{
+    .img_social {background-image:url(https://m1.daumcdn.net/svc/image/U03/common_icon/53F5A6BF055C010003);-webkit-background-size:238px 120px;background-size:238px 120px}
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 2dppx) {
+    .img_social {background-image:url(https://m1.daumcdn.net/svc/image/U03/common_icon/53F5A0C402616E0003);-webkit-background-size:238px 120px;background-size:238px 120px}
+}
+
+.sns_type4 {position:absolute;top:0;left:0;z-index:99999;width:100%;height:100%;margin:0;background-color:rgba(0,0,0,0.5)}
+.sns_type4 .inner_sns {overflow:hidden;position:relative;width:280px;height:296px;margin:0 auto;border-radius:3px;background-color:#fff}
+.sns_type4 .tit_sns {display:block;height:40px;border-top-left-radius:3px;border-top-right-radius:3px;border-bottom:1px solid #e0e0e0;font-size:15px;line-height:41px;color:#333;background-color:#f7f7f7;text-align:center}
+.sns_type4 .list_sns {width:auto;padding:9px 8px 5px}
+.sns_type4 .list_sns li {width:25%;height:auto;padding:5px 0 4px}
+.sns_type4 .list_sns .link_sns {font-size:12px;border:0 none;line-height:21px;text-align:center;text-indent:0}
+.sns_type4 .tf_url {display:block;overflow:hidden;width:251px;height:24px;padding-top:8px;margin:0 auto;border:1px solid #e0e0e0;border-radius:2px;font-size:15px;line-height:17px;background-color:#fff;text-indent:8px;white-space:nowrap;box-sizing:content-box!important}
+.sns_type4 .desc_url {display:block;margin-top:5px;font-size:12px;color:#666;line-height:14px;text-indent:15px}
+.sns_type4 .btn_close {position:absolute;top:0;right:0;height:13px;padding:13px 13px 14px}
+.sns_type4 .ico_close {display:inline-block;width:13px;height:13px;background-position:-180px -60px;vertical-align:top}
+.sns_type4 .ico_sns_kt {width:56px;height:56px;margin:0 auto;background-position:0 0}
+.sns_type4 .ico_sns_ks{width:56px;height:56px;margin:0 auto;background-position:-60px 0}
+.sns_type4 .ico_sns_twi {width:56px;height:56px;margin:0 auto;background-position:-120px 0}
+.sns_type4 .ico_sns_face {width:56px;height:56px;margin:0 auto;background-position:-180px 0}
+.sns_type4 .ico_sns_kg {width:56px;height:56px;margin:0 auto;background-position:0 -60px}
+.sns_type4 .ico_sns_mail {width:56px;height:56px;margin:0 auto;background-position:-60px -60px}
+.sns_type4 .ico_sns_bd {width:56px;height:56px;margin:0 auto;background-position:-120px -60px}
+
+/* 소셜쉐어 Black Type */
+.type_black .basis_sns {border:1px solid #171717;background-color:#3b3b3b;background-image:-webkit-gradient(linear,left top,left bottom, from(#404040),to(#363636));background-image:-moz-linear-gradient(top, #404040, #363636);background-image:-o-linear-gradient(top, #404040,#363636);background-image:linear-gradient(to bottom, #404040, #363636)}
+.type_black .list_sns .link_sns {border-right:1px solid #2e2e2e}
+.type_black .link_sns .txt_eng {color:#e5e5e5}
+.type_black .link_url {border-right:1px solid #2e2e2e}
+.type_black .inner_more {border:1px solid #171717}
+.type_black .list_snsmore .link_sns {color:#e6e6e6;border-right:1px solid #2f2f2f;background-color:#3d3d3d}
+.type_black .list_snsmore .lst .link_sns{border-right:0 none}
+.type_black .inner_more .btn_close {border-top:1px solid #292929;background-color:#303030}
+.type_black .txt_close {color:#f5f5f5}
+.type_black .inner_url {border:1px solid #171717;background-color:#303030}
+.type_black .tf_url {border:1px solid #292929;color:#fff;background-color:#3d3d3d;white-space:nowrap}
+.type_black .desc_url {color:#8c8c8c}
+.type_black .ico_more {background-position:-110px -100px}
+
+input,textarea {-webkit-tap-highlight-color:rgba(0,0,0,0)}
+input[type="search"]::-webkit-search-cancel-button {-webkit-appearance:none}
+/* Common Code End */ </style><style type="text/css">.adfit__border{position:absolute}.adfit__border--left{height:100%;left:0;top:0;width:1px}.adfit__border--right{height:100%;right:0;top:0;width:1px}.adfit__border--top{height:1px;left:0;top:0;width:100%}.adfit__border--bottom{bottom:0;height:1px;left:0;width:100%}</style><style type="text/css">.adfit__swipeable{-webkit-tap-highlight-color:transparent;cursor:default;height:100%;left:0;outline:none;position:absolute;top:0;width:100%}</style><style type="text/css">.adfit__a11y-layer{pointer-events:none}.adfit__a11y-layer__hint{background-image:url("data:image/png;base64,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");background-position:50%;background-repeat:no-repeat;background-size:158px 58px;height:100%;left:0;position:absolute;top:0;width:100%}</style><style type="text/css">.adfit__tag-button{-webkit-tap-highlight-color:transparent;-webkit-box-direction:normal;-webkit-font-feature-settings:"tnum";font-feature-settings:"tnum";border:1px solid transparent;border-radius:2px;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;display:inline-block;font-family:sans-serif;font-size:10px;font-variant:tabular-nums;height:auto;letter-spacing:0;line-height:18px;list-style:none;margin:4px 4px 0 0;opacity:.9;padding:0 7px;white-space:nowrap}.adfit__tag-button,.adfit__tag-button--yellow{background-color:#fa8c16}.adfit__tag-button--purple{background-color:#722ed1}.adfit__tag-button--blue{background-color:#108ee9}.adfit__tag-button--orange{background-color:#f50}.adfit__tag-button--green{background-color:#8bc34a}.adfit__tag-button--gray{background-color:#a9a9a9}</style><style type="text/css">.adfit__debug-toolbar{height:100%;line-height:normal;max-height:inherit;overflow:visible;position:absolute;right:0;top:0;width:1px}.adfit__debug-toolbar__top{position:absolute;right:0;top:0;white-space:nowrap}.adfit__debug-toolbar__bottom{bottom:4px;position:absolute;right:0;white-space:nowrap}.adfit__debug-toolbar--show-on-hover,.adfit__debug-toolbar--show-on-hover-and-fadeout{opacity:0;pointer-events:none}.adfit__debug-toolbar-container:hover .adfit__debug-toolbar--show-on-hover{opacity:1}.adfit__debug-toolbar-container:hover .adfit__debug-toolbar--fadeout{-webkit-animation:fadeout 1.5s forwards;animation:fadeout 1.5s forwards}@-webkit-keyframes fadeout{0%{opacity:1}66%{opacity:1}to{opacity:0}}@keyframes fadeout{0%{opacity:1}66%{opacity:1}to{opacity:0}}</style><style type="text/css">.adfit__banner__outer{max-height:inherit;position:relative}.adfit__banner__inner,.adfit__banner__inner iframe{border:0;height:100%;left:0;max-height:inherit;position:absolute;top:0;width:100%}</style></head>
+<body data-time="1693637726961" data-isl="false" data-agr="false" class="portrait" style=""> <div id="daumWrap">
+	<header id="daumHead" class="map_header">    <div class="k_head">
+        <h1 class="tit_daum">
+            <a href="/actions/index" id="kakaoLogo" class="img_comm">
+                <img src="//t1.daumcdn.net/localimg/localimages/07/2018/mw/m640/img_logo.png" width="90" height="20" class="img_logo" alt="kakaomap">            </a>
+                    </h1>
+        <div class="wrap_until">
+            <a href="javascript:;" class="link_gnb" role="button"><span class="ico_comm_km ico_gnb">지도 상세 메뉴 펼치기</span></a>
+        </div>
+        <a href="#none" class="link_app"><span class="screen_out">앱으로 열기</span>APP</a>    </div>
+    <div class="menu_map">
+        <div class="inner_menu">
+            <div class="menu_area">
+                <nav id="kakaoGnb">
+                    <h2 class="screen_out">지도 메뉴</h2>
+                    <ul class="gnb_menu">
+                        <li><a href="/actions/index?mode=search" class="link_menu menu_search"><span class="ico_comm_km ico_search"></span>검색</a></li>
+                        <li><a href="/actions/routeView" class="link_menu menu_route"><span class="ico_comm_km ico_route"></span>길찾기</a></li>
+                        <li><a href="/actions/busView" class="link_menu menu_bus"><span class="ico_comm_km ico_bus"></span>버스</a></li>
+                        <li><a href="/actions/trafficRegionView" class="link_menu menu_traffic"><span class="ico_comm_km ico_transportation"></span>교통정보</a></li>
+                        <li><a href="/actions/air" class="link_menu menu_air"><span class="ico_comm_km ico_air"></span>대기정보</a></li>
+                        <li><a href="#none" class="link_menu menu_my"><span class="ico_comm_km ico_my"></span>마이페이지</a></li>
+                    </ul>
+                </nav>
+                <div class="wrap_apps">
+                    <strong class="tit_apps">모바일앱</strong>                    <a href="javascript:;" class="link_kakaomap">
+                        <span class="ico_comm_km"></span>카카오맵
+                    </a>                </div>                <div class="menu_foot">
+                    <a href="http://kakaomap.tistory.com/category/%EC%95%8C%EB%A6%BD%EB%8B%88%EB%8B%A4" class="link_info">공지사항</a><span class="txt_bar"></span><a href="https://cs.kakao.com/requests?locale=ko&amp;service=101" class="link_info">고객센터</a><span class="txt_bar"></span><a href="http://kakaomap.tistory.com/68" class="link_info">지도정보</a><span class="txt_bar"></span><a href="#none" class="link_info link_login">로그인</a>
+                </div>
+                <a href="javascript:;" class="link_close">
+                    <span class="ico_comm_km ico_close">메뉴 닫기</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<hr class="hide">
+
+	<article id="daumContent" role="main" class="cont_map">
+
+
+        <div id="innerSearchLayer">
+    <form id="insideTotalSearchForm" class="inside_sch search_on search_result_list_on" role="search">        <fieldset>
+            <legend class="screen_out">지도 내부 검색어 입력폼</legend>
+            <a href="javascript:;" class="link_search link_search_map "><span class="ico_comm ico_map"></span>지도<span class="screen_out">로 가기</span></a>
+            <a href="javascript:;" class="link_search link_search_list hide"><span class="ico_comm ico_list"></span>목록<span class="screen_out">으로 가기</span></a>
+            <a href="javascript:;" class="link_search link_search_close hide"><span class="ico_comm ico_close">서제스트 닫기</span></a>
+            <div class="box_search default_search">                <input type="search" id="innerQuery" class="tf_keyword" value="맥도날드" title="검색어 입력" placeholder="장소, 주소, 버스 검색" name="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="100">
+                <button type="button" class="btn_sch btn_reset"><span class="ico_comm ico_del">검색어 지우기</span></button>
+            </div>
+        </fieldset>
+    </form>
+
+    <div class="d_sgt suggest-layer-holder" id="list_inner_suggest">                                                                            </div>
+</div>
+
+        <div class="recomm_word hide">
+	<strong class="screen_out">추천 검색어</strong>
+	<div class="inner_recomm">
+		<ul class="list_recomm">
+
+            <li>
+                <a href="javascript:;" class="link_recomm">
+                    <span class="ico_comm ico_subway"></span>
+                    <span class="txt_word" data-logname="metro">지하철</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="link_recomm">
+                    <span class="ico_comm ico_bus"></span>
+                    <span class="txt_word" data-logname="busstop">버스정류장</span>
+                </a>
+            </li>
+
+			<li>
+				<a href="javascript:;" class="link_recomm">
+					<span class="ico_comm ico_food"></span>
+					<span class="txt_word" data-logname="restaurant">맛집</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="link_recomm">
+					<span class="ico_comm ico_hotel"></span>
+					<span class="txt_word" data-logname="hotel">숙박</span>
+				</a>
+			</li>
+            <li>
+                <a href="javascript:;" class="link_recomm">
+                    <span class="ico_comm ico_coffe"></span>
+                    <span class="txt_word" data-logname="coffee">카페</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="link_recomm">
+                    <span class="ico_comm ico_oil"></span>
+                    <span class="txt_word" data-logname="gas">주유소</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="link_recomm">
+                    <span class="ico_comm ico_parking"></span>
+                    <span class="txt_word" data-logname="parkinglot">주차장</span>
+                </a>
+            </li>
+			<li>
+				<a href="javascript:;" class="link_recomm">
+					<span class="ico_comm ico_bank"></span>
+					<span class="txt_word" data-logname="bank">은행</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="link_recomm">
+					<span class="ico_comm ico_store"></span>
+					<span class="txt_word" data-logname="convenience">편의점</span>
+				</a>
+			</li>
+            <li>
+                <a href="javascript:;" class="link_recomm">
+                    <span class="ico_comm ico_market"></span>
+                    <span class="txt_word" data-logname="mart">대형마트</span>
+                </a>
+            </li>
+			<li>
+				<a href="javascript:;" class="link_recomm">
+					<span class="ico_comm ico_hospital"></span>
+					<span class="txt_word" data-logname="hospital">병원</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="link_recomm">
+					<span class="ico_comm ico_pharmacy"></span>
+					<span class="txt_word" data-logname="pharmacy">약국</span>
+				</a>
+			</li>
+
+		</ul>
+	</div>
+</div>
+<div class="history_search hide">
+	<strong class="screen_out">검색 히스토리</strong>
+	<ul class="list_history"><li class="fst" data-type="place" data-title="부대통령뚝배기 상명대점" data-id="1900537131" data-wx="490266" data-wy="1139287" data-etitle="" data-ewx="" data-ewy=""><span class="history_ico ico_place"><span class="screen_out">장소</span></span><a href="javascript:;" class="link_history">부대통령뚝배기 상명대점<span class="txt_time">09.02</span></a></li></ul>
+	<div class="foot_history">
+		<button type="button" class="btn_close">검색 히스토리 삭제</button>
+        <p class="txt_none hide">최근 히스토리가 없어요.</p>
+	</div>
+</div>
+
+
+		<div class="list_content_wrap" style="min-height: 1025px;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="search_position_wrap ">
+    <p class="search_position_text">서울 종로구 사직동</p>
+    <a href="javascript:;" class="btn_now_position">
+        <div class="nowpos_spinner_wrap">
+            <div class="spinner_wrapper">
+                <div class="spinner_main">
+                    <div class="spinner_left">
+                        <div class="half_circle"></div>
+                    </div>
+                    <div class="spinner_right">
+                        <div class="half_circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="now_text">위치</span>
+    </a>
+</div>
+
+<div class="search_result_wrap" data-wxenc="LVRQTRHR" data-wyenc="QNMLSQMIQRR" data-query="맥도날드" data-spellquery="" data-cidx="" data-placecount="647" data-addresscount="0" data-buscount="35" data-busstopcount="1" data-time="1693637726961" data-mbr="483381,1120699,506462,1136053" data-analysis="맥도날드|||||0" data-service="" data-sort="" data-qatype="">
+	<h2 class="screen_out">검색 결과</h2>
+	<h3 class="screen_out live_tab_guide_text">장소</h3>
+        <div class="result_txt has_sort">
+                <div class="inner_opt sort_sel ">
+                            <select class="opt_select" id="sortSelect">
+                    <option value="0">정확도순</option>
+                                        <option value="2">거리순</option>
+                                    </select>
+                        <span class="txt_selected" aria-hidden="true">정확도순</span>
+            <span class="box_arrow"><span class="ico_arrow"></span></span>
+        </div>
+    </div>
+            <ul class="tab_result">
+        <li class="tab_type_place on"><a href="javascript:;" class="link_tab" data-logkey="place">장소</a></li>
+        <li class="tab_type_bus "><a href="javascript:;" class="link_tab" data-logkey="bus">버스</a></li>
+    </ul>
+
+        <div class="search_result_place_body ">
+
+
+		<ul id="placeList" class="list_result ">
+
+
+
+
+
+
+
+
+            <li class="search_item base" data-id="11902329" data-cid="11902329" data-sourceid="" data-source="" data-type="place" data-wx="495443" data-wy="1129806" data-title="맥도날드 서울시청점" data-ismarker="true" data-roadviewyn="Y" data-cpg="1,15,1" data-phone="02-6215-8100" data-yellowid="">
+            <a href="javascript:;" class="link_result">
+                                <span class="wrap_img">
+                    <img src="//img1.daumcdn.net/thumb/C200x200.q90/?fname=http://t1.daumcdn.net/place/F10270AB3159447FBEC808088F29B90B" width="64" height="64" class="img_result" alt="대표 이미지">
+                </span>
+                                <span class="info_result">
+                                        <span class="txt_tit">
+                        <strong class="tit_g">맥도날드 서울시청점</strong><span class="txt_ginfo ">패스트푸드</span>
+                    </span>
+                                        <span class="info_detail">
+                                                <span class="ico_comm star_rate">
+                            <span class="ico_comm inner_star" style="width:68%">평점 : </span>
+                            <em class="num_rate">3.4</em>
+                        </span>
+                        <span class="txt_num">(47)</span><span class="screen_out">건</span>
+                                                <span class="txt_bar">|</span>                                                리뷰 <span class="txt_num txt_num_end"> 85</span><span class="screen_out">개</span>
+                                            </span>
+                                                                                    <span class="txt_g">서울 중구  남대문로9길 51 효덕빌딩 1층 (을지로1가)</span>
+                                                            <span class="info_openoff">
+                        <span class="tag_openoff">영업중</span>
+                        <span class="txt_openoff"> 07:00 ~ 24:00</span>
+                    </span>
+
+
+
+                                        </span></a><a href="tel:02-6215-8100" class="num_phone"><span class="screen_out">TEL</span>02-6215-8100</a>                    <span class="tag_wrap"></span>
+
+
+            			<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_route">길찾기</a>
+
+			</span>
+            		</li>
+
+
+
+
+
+
+
+
+            <li class="search_item base" data-id="12674579" data-cid="12674579" data-sourceid="" data-source="" data-type="place" data-wx="496583" data-wy="1129068" data-title="맥도날드 명동점" data-ismarker="true" data-roadviewyn="Y" data-cpg="1,15,2" data-phone="02-6215-8200" data-yellowid="">
+            <a href="javascript:;" class="link_result">
+                                <span class="wrap_img">
+                    <img src="//img1.daumcdn.net/thumb/C200x200.q90/?fname=http://t1.daumcdn.net/place/9B10C21A6C854DECB1053DADD7F12B13" width="64" height="64" class="img_result" alt="대표 이미지">
+                </span>
+                                <span class="info_result">
+                                        <span class="txt_tit">
+                        <strong class="tit_g">맥도날드 명동점</strong><span class="txt_ginfo ">패스트푸드</span>
+                    </span>
+                                        <span class="info_detail">
+                                                <span class="ico_comm star_rate">
+                            <span class="ico_comm inner_star" style="width:66%">평점 : </span>
+                            <em class="num_rate">3.3</em>
+                        </span>
+                        <span class="txt_num">(40)</span><span class="screen_out">건</span>
+                                                <span class="txt_bar">|</span>                                                리뷰 <span class="txt_num txt_num_end"> 51</span><span class="screen_out">개</span>
+                                            </span>
+                                                                                    <span class="txt_g">서울 중구  명동7길 8 1층 (명동1가)</span>
+                                                            <span class="info_openoff">
+                        <span class="tag_openoff">영업중</span>
+                        <span class="txt_openoff"> 07:00 ~ 22:20</span>
+                    </span>
+
+
+
+                                        </span></a><a href="tel:02-6215-8200" class="num_phone"><span class="screen_out">TEL</span>02-6215-8200</a>                    <span class="tag_wrap"></span>
+
+
+            			<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_route">길찾기</a>
+
+			</span>
+            		</li><li><div class="search_bizboard"><h3 class="screen_out">광고</h3><a href="#none" class="link_bizboard" style="background-color:#F3F3F3"><ins class="kakao_ad_area" data-ad-unit="DAN-3b6im1mfQr3sjvmH" data-ad-onfail="xe.bizboard.onFailBizboard" id="kakao_ad_T99GyI" style="min-height: 70px; max-height: 86px;"></ins></a></div></li>
+
+
+
+
+
+
+
+
+            <li class="search_item base" data-id="8350550" data-cid="8350550" data-sourceid="" data-source="" data-type="place" data-wx="497893" data-wy="1130840" data-title="맥도날드 종로3점" data-ismarker="true" data-roadviewyn="Y" data-cpg="1,15,3" data-phone="070-7017-0434" data-yellowid="">
+            <a href="javascript:;" class="link_result">
+                                <span class="wrap_img">
+                    <img src="//img1.daumcdn.net/thumb/C200x200.q90/?fname=http://t1.daumcdn.net/place/98CA7F897473458B836C0BB2DF54F5BD" width="64" height="64" class="img_result" alt="대표 이미지">
+                </span>
+                                <span class="info_result">
+                                        <span class="txt_tit">
+                        <strong class="tit_g">맥도날드 종로3점</strong><span class="txt_ginfo ">패스트푸드</span>
+                    </span>
+                                        <span class="info_detail">
+                                                <span class="ico_comm star_rate">
+                            <span class="ico_comm inner_star" style="width:48%">평점 : </span>
+                            <em class="num_rate">2.4</em>
+                        </span>
+                        <span class="txt_num">(67)</span><span class="screen_out">건</span>
+                                                <span class="txt_bar">|</span>                                                리뷰 <span class="txt_num txt_num_end"> 3</span><span class="screen_out">개</span>
+                                            </span>
+                                                                                    <span class="txt_g">서울 종로구  종로 115  (종로3가)</span>
+                                                            <span class="info_openoff">
+                        <span class="tag_openoff">영업중</span>
+                        <span class="txt_openoff"> 07:00 ~ 22:00</span>
+                    </span>
+
+
+
+                                        </span></a><a href="tel:070-7017-0434" class="num_phone"><span class="screen_out">TEL</span>070-7017-0434</a>                    <span class="tag_wrap"></span>
+
+
+            			<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_route">길찾기</a>
+
+			</span>
+            		</li>
+
+
+
+
+
+
+
+
+            <li class="search_item base" data-id="18938863" data-cid="18938863" data-sourceid="" data-source="" data-type="place" data-wx="496615" data-wy="1128073" data-title="맥도날드 명동2호점" data-ismarker="true" data-roadviewyn="Y" data-cpg="1,15,4" data-phone="070-7017-1449" data-yellowid="">
+            <a href="javascript:;" class="link_result">
+                                <span class="wrap_img">
+                    <img src="//img1.daumcdn.net/thumb/C200x200.q90/?fname=http://t1.daumcdn.net/place/7CCC359C50764840A059E051BE866928" width="64" height="64" class="img_result" alt="대표 이미지">
+                </span>
+                                <span class="info_result">
+                                        <span class="txt_tit">
+                        <strong class="tit_g">맥도날드 명동2호점</strong><span class="txt_ginfo ">패스트푸드</span>
+                    </span>
+                                        <span class="info_detail">
+                                                <span class="ico_comm star_rate">
+                            <span class="ico_comm inner_star" style="width:30%">평점 : </span>
+                            <em class="num_rate">1.5</em>
+                        </span>
+                        <span class="txt_num">(59)</span><span class="screen_out">건</span>
+                                                <span class="txt_bar">|</span>                                                리뷰 <span class="txt_num txt_num_end"> 10</span><span class="screen_out">개</span>
+                                            </span>
+                                                                                    <span class="txt_g">서울 중구  퇴계로 116-1  (회현동3가)</span>
+                                                            <span class="info_openoff">
+                        <span class="tag_openoff">영업중</span>
+                        <span class="txt_openoff"> 10:30 ~ 22:00</span>
+                    </span>
+
+
+
+                                        </span></a><a href="tel:070-7017-1449" class="num_phone"><span class="screen_out">TEL</span>070-7017-1449</a>                    <span class="tag_wrap"></span>
+
+
+            			<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_route">길찾기</a>
+
+			</span>
+            		</li>
+
+
+
+
+
+
+
+
+            <li class="search_item base" data-id="10346282" data-cid="10346282" data-sourceid="" data-source="" data-type="place" data-wx="493507" data-wy="1126435" data-title="맥도날드 서울역점" data-ismarker="true" data-roadviewyn="Y" data-cpg="1,15,5" data-phone="02-6743-1400" data-yellowid="">
+            <a href="javascript:;" class="link_result">
+                                <span class="wrap_img">
+                    <img src="//img1.daumcdn.net/thumb/C200x200.q90/?fname=http://t1.daumcdn.net/place/62F2CC2419284EA0B40258C968020071" width="64" height="64" class="img_result" alt="대표 이미지">
+                </span>
+                                <span class="info_result">
+                                        <span class="txt_tit">
+                        <strong class="tit_g">맥도날드 서울역점</strong><span class="txt_ginfo ">패스트푸드</span>
+                    </span>
+                                        <span class="info_detail">
+                                                <span class="ico_comm star_rate">
+                            <span class="ico_comm inner_star" style="width:52%">평점 : </span>
+                            <em class="num_rate">2.6</em>
+                        </span>
+                        <span class="txt_num">(47)</span><span class="screen_out">건</span>
+                                                <span class="txt_bar">|</span>                                                리뷰 <span class="txt_num txt_num_end"> 66</span><span class="screen_out">개</span>
+                                            </span>
+                                                                                    <span class="txt_g">서울 중구  한강대로 405 2층 (동자동)</span>
+                                                            <span class="info_openoff">
+                        <span class="tag_openoff">영업중</span>
+                        <span class="txt_openoff"> 04:30 ~ 01:00</span>
+                    </span>
+
+
+
+                                        </span></a><a href="tel:02-6743-1400" class="num_phone"><span class="screen_out">TEL</span>02-6743-1400</a>                    <span class="tag_wrap"></span>
+
+
+            			<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_route">길찾기</a>
+
+			</span>
+            		</li>
+
+
+
+
+
+
+
+
+            <li class="search_item base" data-id="8291988" data-cid="8291988" data-sourceid="" data-source="" data-type="place" data-wx="500464" data-wy="1134253" data-title="맥도날드 대학로점" data-ismarker="true" data-roadviewyn="Y" data-cpg="1,15,6" data-phone="02-6212-2900" data-yellowid="">
+            <a href="javascript:;" class="link_result">
+                                <span class="wrap_img">
+                    <img src="//img1.daumcdn.net/thumb/C200x200.q90/?fname=http://t1.daumcdn.net/place/D33DCBA60D7243E096EF2FBDC7CF21AF" width="64" height="64" class="img_result" alt="대표 이미지">
+                </span>
+                                <span class="info_result">
+                                        <span class="txt_tit">
+                        <strong class="tit_g">맥도날드 대학로점</strong><span class="txt_ginfo ">패스트푸드</span>
+                    </span>
+                                        <span class="info_detail">
+                                                <span class="ico_comm star_rate">
+                            <span class="ico_comm inner_star" style="width:58%">평점 : </span>
+                            <em class="num_rate">2.9</em>
+                        </span>
+                        <span class="txt_num">(34)</span><span class="screen_out">건</span>
+                                                <span class="txt_bar">|</span>                                                리뷰 <span class="txt_num txt_num_end"> 22</span><span class="screen_out">개</span>
+                                            </span>
+                                                                                    <span class="txt_g">서울 종로구  대학로 130  (동숭동)</span>
+                                                            <span class="info_openoff">
+                        <span class="tag_openoff">영업중</span>
+                        <span class="txt_openoff"> 07:00 ~ 01:00</span>
+                    </span>
+
+
+
+                                        </span></a><a href="tel:02-6212-2900" class="num_phone"><span class="screen_out">TEL</span>02-6212-2900</a>                    <span class="tag_wrap"></span>
+
+
+            			<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_route">길찾기</a>
+
+			</span>
+            		</li>
+
+
+
+
+
+
+
+
+            <li class="search_item base" data-id="21253166" data-cid="21253166" data-sourceid="" data-source="" data-type="place" data-wx="499752" data-wy="1134402" data-title="맥도날드 성균관대점" data-ismarker="true" data-roadviewyn="Y" data-cpg="1,15,7" data-phone="02-6415-8500" data-yellowid="">
+            <a href="javascript:;" class="link_result">
+                                <span class="wrap_img">
+                    <img src="//img1.daumcdn.net/thumb/C200x200.q90/?fname=http://t1.daumcdn.net/place/46F2EA8F8EE04FB798A4BF98A78823DF" width="64" height="64" class="img_result" alt="대표 이미지">
+                </span>
+                                <span class="info_result">
+                                        <span class="txt_tit">
+                        <strong class="tit_g">맥도날드 성균관대점</strong><span class="txt_ginfo ">패스트푸드</span>
+                    </span>
+                                        <span class="info_detail">
+                                                <span class="ico_comm star_rate">
+                            <span class="ico_comm inner_star" style="width:64%">평점 : </span>
+                            <em class="num_rate">3.2</em>
+                        </span>
+                        <span class="txt_num">(21)</span><span class="screen_out">건</span>
+                                                <span class="txt_bar">|</span>                                                리뷰 <span class="txt_num txt_num_end"> 13</span><span class="screen_out">개</span>
+                                            </span>
+                                                                                    <span class="txt_g">서울 종로구  창경궁로 241-1  (명륜2가)</span>
+                                                            <span class="info_openoff">
+                        <span class="tag_openoff">영업중</span>
+                        <span class="txt_openoff"> 08:00 ~ 24:00</span>
+                    </span>
+
+
+
+                                        </span></a><a href="tel:02-6415-8500" class="num_phone"><span class="screen_out">TEL</span>02-6415-8500</a>                    <span class="tag_wrap"></span>
+
+
+            			<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_route">길찾기</a>
+
+			</span>
+            		</li>
+
+
+
+
+
+
+
+
+            <li class="search_item base" data-id="371363260" data-cid="371363260" data-sourceid="" data-source="" data-type="place" data-wx="487775" data-wy="1135860" data-title="맥도날드 홍제역점" data-ismarker="true" data-roadviewyn="Y" data-cpg="1,15,8" data-phone="02-6743-3400" data-yellowid="">
+            <a href="javascript:;" class="link_result">
+                                <span class="wrap_img">
+                    <img src="//img1.daumcdn.net/thumb/C200x200.q90/?fname=http://t1.daumcdn.net/place/6792CE200C97436A9B006473221CA140" width="64" height="64" class="img_result" alt="대표 이미지">
+                </span>
+                                <span class="info_result">
+                                        <span class="txt_tit">
+                        <strong class="tit_g">맥도날드 홍제역점</strong><span class="txt_ginfo ">패스트푸드</span>
+                    </span>
+                                        <span class="info_detail">
+                                                <span class="ico_comm star_rate">
+                            <span class="ico_comm inner_star" style="width:56%">평점 : </span>
+                            <em class="num_rate">2.8</em>
+                        </span>
+                        <span class="txt_num">(28)</span><span class="screen_out">건</span>
+                                                <span class="txt_bar">|</span>                                                리뷰 <span class="txt_num txt_num_end"> 18</span><span class="screen_out">개</span>
+                                            </span>
+                                                                                    <span class="txt_g">서울 서대문구  통일로 442-1  (홍제동)</span>
+                                                            <span class="info_openoff">
+                        <span class="tag_openoff">영업중</span>
+                        <span class="txt_openoff"> 00:00 ~ 24:00</span>
+                    </span>
+
+
+
+                                        </span></a><a href="tel:02-6743-3400" class="num_phone"><span class="screen_out">TEL</span>02-6743-3400</a>                    <span class="tag_wrap"></span>
+
+
+            			<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_route">길찾기</a>
+
+			</span>
+            		</li>
+
+
+
+
+
+
+
+
+            <li class="search_item base" data-id="18606733" data-cid="18606733" data-sourceid="" data-source="" data-type="place" data-wx="486027" data-wy="1127514" data-title="맥도날드 연세대점" data-ismarker="true" data-roadviewyn="Y" data-cpg="1,15,9" data-phone="02-6010-5800" data-yellowid="">
+            <a href="javascript:;" class="link_result">
+                                <span class="wrap_img">
+                    <img src="//img1.daumcdn.net/thumb/C200x200.q90/?fname=http://t1.daumcdn.net/place/6B41829DB0134BC2B0F351DE9FDFA787" width="64" height="64" class="img_result" alt="대표 이미지">
+                </span>
+                                <span class="info_result">
+                                        <span class="txt_tit">
+                        <strong class="tit_g">맥도날드 연세대점</strong><span class="txt_ginfo ">패스트푸드</span>
+                    </span>
+                                        <span class="info_detail">
+                                                <span class="ico_comm star_rate">
+                            <span class="ico_comm inner_star" style="width:60%">평점 : </span>
+                            <em class="num_rate">3.0</em>
+                        </span>
+                        <span class="txt_num">(67)</span><span class="screen_out">건</span>
+                                                <span class="txt_bar">|</span>                                                리뷰 <span class="txt_num txt_num_end"> 50</span><span class="screen_out">개</span>
+                                            </span>
+                                                                                    <span class="txt_g">서울 서대문구  연세로 33  (창천동)</span>
+                                                            <span class="info_openoff">
+                        <span class="tag_openoff">영업중</span>
+                        <span class="txt_openoff"> 00:00 ~ 24:00</span>
+                    </span>
+
+
+
+                                        </span></a><a href="tel:02-6010-5800" class="num_phone"><span class="screen_out">TEL</span>02-6010-5800</a>                    <span class="tag_wrap"></span>
+
+
+            			<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_route">길찾기</a>
+
+			</span>
+            		</li>
+
+
+
+
+
+
+
+
+            <li class="search_item base" data-id="457867179" data-cid="457867179" data-sourceid="" data-source="" data-type="place" data-wx="503342" data-wy="1131564" data-title="맥도날드 동묘점" data-ismarker="true" data-roadviewyn="Y" data-cpg="1,15,10" data-phone="02-6743-7500" data-yellowid="">
+            <a href="javascript:;" class="link_result">
+                                <span class="wrap_img">
+                    <img src="//img1.daumcdn.net/thumb/C200x200.q90/?fname=http://t1.daumcdn.net/place/464B649EF592454EA0B8902DFD926C81" width="64" height="64" class="img_result" alt="대표 이미지">
+                </span>
+                                <span class="info_result">
+                                        <span class="txt_tit">
+                        <strong class="tit_g">맥도날드 동묘점</strong><span class="txt_ginfo ">패스트푸드</span>
+                    </span>
+                                        <span class="info_detail">
+                                                <span class="ico_comm star_rate">
+                            <span class="ico_comm inner_star" style="width:66%">평점 : </span>
+                            <em class="num_rate">3.3</em>
+                        </span>
+                        <span class="txt_num">(35)</span><span class="screen_out">건</span>
+                                                <span class="txt_bar">|</span>                                                리뷰 <span class="txt_num txt_num_end"> 23</span><span class="screen_out">개</span>
+                                            </span>
+                                                                                    <span class="txt_g">서울 종로구  종로 339  (창신동)</span>
+                                                            <span class="info_openoff">
+                        <span class="tag_openoff">영업중</span>
+                        <span class="txt_openoff"> 00:00 ~ 24:00</span>
+                    </span>
+
+
+
+                                        </span></a><a href="tel:02-6743-7500" class="num_phone"><span class="screen_out">TEL</span>02-6743-7500</a>                    <span class="tag_wrap"></span>
+
+
+            			<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_route">길찾기</a>
+
+			</span>
+            		</li>
+
+
+
+
+
+
+
+
+            <li class="search_item base" data-id="10338297" data-cid="10338297" data-sourceid="" data-source="" data-type="place" data-wx="501668" data-wy="1136053" data-title="맥도날드 삼선점" data-ismarker="true" data-roadviewyn="Y" data-cpg="1,15,11" data-phone="02-6229-3500" data-yellowid="">
+            <a href="javascript:;" class="link_result">
+                                <span class="wrap_img">
+                    <img src="//img1.daumcdn.net/thumb/C200x200.q90/?fname=http://t1.daumcdn.net/place/95EC7E2D094C4614853F9D6974E13D42" width="64" height="64" class="img_result" alt="대표 이미지">
+                </span>
+                                <span class="info_result">
+                                        <span class="txt_tit">
+                        <strong class="tit_g">맥도날드 삼선점</strong><span class="txt_ginfo ">패스트푸드</span>
+                    </span>
+                                        <span class="info_detail">
+                                                <span class="ico_comm star_rate">
+                            <span class="ico_comm inner_star" style="width:38%">평점 : </span>
+                            <em class="num_rate">1.9</em>
+                        </span>
+                        <span class="txt_num">(41)</span><span class="screen_out">건</span>
+                                                <span class="txt_bar">|</span>                                                리뷰 <span class="txt_num txt_num_end"> 6</span><span class="screen_out">개</span>
+                                            </span>
+                                                                                    <span class="txt_g">서울 성북구  동소문로 13 일화빌딩 1층 (동소문동1가)</span>
+                                                            <span class="info_openoff">
+                        <span class="tag_openoff">영업중</span>
+                        <span class="txt_openoff"> 08:00 ~ 24:00</span>
+                    </span>
+
+
+
+                                        </span></a><a href="tel:02-6229-3500" class="num_phone"><span class="screen_out">TEL</span>02-6229-3500</a>                    <span class="tag_wrap"></span>
+
+
+            			<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_route">길찾기</a>
+
+			</span>
+            		</li>
+
+
+
+
+
+
+
+
+            <li class="search_item base" data-id="14536202" data-cid="14536202" data-sourceid="" data-source="" data-type="place" data-wx="488307" data-wy="1122690" data-title="맥도날드 공덕점" data-ismarker="true" data-roadviewyn="Y" data-cpg="1,15,12" data-phone="070-7017-3422" data-yellowid="">
+            <a href="javascript:;" class="link_result">
+                                <span class="wrap_img">
+                    <img src="//img1.daumcdn.net/thumb/C200x200.q90/?fname=http://t1.daumcdn.net/place/AF70EAA8017F40F2AAAE440C50E16A27" width="64" height="64" class="img_result" alt="대표 이미지">
+                </span>
+                                <span class="info_result">
+                                        <span class="txt_tit">
+                        <strong class="tit_g">맥도날드 공덕점</strong><span class="txt_ginfo ">패스트푸드</span>
+                    </span>
+                                        <span class="info_detail">
+                                                <span class="ico_comm star_rate">
+                            <span class="ico_comm inner_star" style="width:34%">평점 : </span>
+                            <em class="num_rate">1.7</em>
+                        </span>
+                        <span class="txt_num">(63)</span><span class="screen_out">건</span>
+                                                <span class="txt_bar">|</span>                                                리뷰 <span class="txt_num txt_num_end"> 37</span><span class="screen_out">개</span>
+                                            </span>
+                                                                                    <span class="txt_g">서울 마포구  마포대로 53 마포트라펠리스 1층 (도화동)</span>
+                                                            <span class="info_openoff">
+                        <span class="tag_openoff">영업중</span>
+                        <span class="txt_openoff"> 07:00 ~ 22:00</span>
+                    </span>
+
+
+
+                                        </span></a><a href="tel:070-7017-3422" class="num_phone"><span class="screen_out">TEL</span>070-7017-3422</a>                    <span class="tag_wrap"></span>
+
+
+            			<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_route">길찾기</a>
+
+			</span>
+            		</li>
+
+
+
+
+
+
+
+
+            <li class="search_item base" data-id="16988033" data-cid="16988033" data-sourceid="" data-source="" data-type="place" data-wx="497724" data-wy="1120699" data-title="맥도날드 이태원점" data-ismarker="true" data-roadviewyn="Y" data-cpg="1,15,13" data-phone="02-6743-1200" data-yellowid="">
+            <a href="javascript:;" class="link_result">
+                                <span class="wrap_img">
+                    <img src="//img1.daumcdn.net/thumb/C200x200.q90/?fname=http://t1.daumcdn.net/place/74CF95E9354E4527A5E72B8BA6A39497" width="64" height="64" class="img_result" alt="대표 이미지">
+                </span>
+                                <span class="info_result">
+                                        <span class="txt_tit">
+                        <strong class="tit_g">맥도날드 이태원점</strong><span class="txt_ginfo ">패스트푸드</span>
+                    </span>
+                                        <span class="info_detail">
+                                                <span class="ico_comm star_rate">
+                            <span class="ico_comm inner_star" style="width:58%">평점 : </span>
+                            <em class="num_rate">2.9</em>
+                        </span>
+                        <span class="txt_num">(43)</span><span class="screen_out">건</span>
+                                                <span class="txt_bar">|</span>                                                리뷰 <span class="txt_num txt_num_end"> 9</span><span class="screen_out">개</span>
+                                            </span>
+                                                                                    <span class="txt_g">서울 용산구  이태원로 142-1  (이태원동)</span>
+                                                            <span class="info_openoff">
+                        <span class="tag_openoff">영업중</span>
+                        <span class="txt_openoff"> 00:00 ~ 24:00</span>
+                    </span>
+
+
+
+                                        </span></a><a href="tel:02-6743-1200" class="num_phone"><span class="screen_out">TEL</span>02-6743-1200</a>                    <span class="tag_wrap"></span>
+
+
+            			<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_route">길찾기</a>
+
+			</span>
+            		</li>
+
+
+
+
+
+
+
+
+            <li class="search_item base" data-id="26308146" data-cid="26308146" data-sourceid="" data-source="" data-type="place" data-wx="483381" data-wy="1133446" data-title="맥도날드 명지대점" data-ismarker="true" data-roadviewyn="Y" data-cpg="1,15,14" data-phone="070-7209-0569" data-yellowid="">
+            <a href="javascript:;" class="link_result">
+                                <span class="wrap_img">
+                    <img src="//img1.daumcdn.net/thumb/C200x200.q90/?fname=http://t1.daumcdn.net/place/EAE93F8E06D2411EB5468A3BD5FE8066" width="64" height="64" class="img_result" alt="대표 이미지">
+                </span>
+                                <span class="info_result">
+                                        <span class="txt_tit">
+                        <strong class="tit_g">맥도날드 명지대점</strong><span class="txt_ginfo ">패스트푸드</span>
+                    </span>
+                                        <span class="info_detail">
+                                                <span class="ico_comm star_rate">
+                            <span class="ico_comm inner_star" style="width:56%">평점 : </span>
+                            <em class="num_rate">2.8</em>
+                        </span>
+                        <span class="txt_num">(26)</span><span class="screen_out">건</span>
+                                                <span class="txt_bar">|</span>                                                리뷰 <span class="txt_num txt_num_end"> 17</span><span class="screen_out">개</span>
+                                            </span>
+                                                                                    <span class="txt_g">서울 서대문구  거북골로 25  (남가좌동)</span>
+                                                            <span class="info_openoff">
+                        <span class="tag_openoff">영업중</span>
+                        <span class="txt_openoff"> 08:00 ~ 23:00</span>
+                    </span>
+
+
+
+                                        </span></a><a href="tel:070-7209-0569" class="num_phone"><span class="screen_out">TEL</span>070-7209-0569</a>                    <span class="tag_wrap"></span>
+
+
+            			<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_route">길찾기</a>
+
+			</span>
+            		</li>
+
+
+
+
+
+
+
+
+            <li class="search_item base" data-id="21324889" data-cid="21324889" data-sourceid="" data-source="" data-type="place" data-wx="506462" data-wy="1134681" data-title="맥도날드 안암점" data-ismarker="true" data-roadviewyn="Y" data-cpg="1,15,15" data-phone="02-6229-3400" data-yellowid="">
+            <a href="javascript:;" class="link_result">
+                                <span class="wrap_img">
+                    <img src="//img1.daumcdn.net/thumb/C200x200.q90/?fname=http://t1.daumcdn.net/place/930BDDC4F9EF471885C519650B4D1BE2" width="64" height="64" class="img_result" alt="대표 이미지">
+                </span>
+                                <span class="info_result">
+                                        <span class="txt_tit">
+                        <strong class="tit_g">맥도날드 안암점</strong><span class="txt_ginfo ">패스트푸드</span>
+                    </span>
+                                        <span class="info_detail">
+                                                <span class="ico_comm star_rate">
+                            <span class="ico_comm inner_star" style="width:44%">평점 : </span>
+                            <em class="num_rate">2.2</em>
+                        </span>
+                        <span class="txt_num">(47)</span><span class="screen_out">건</span>
+                                                <span class="txt_bar">|</span>                                                리뷰 <span class="txt_num txt_num_end"> 14</span><span class="screen_out">개</span>
+                                            </span>
+                                                                                    <span class="txt_g">서울 성북구  고려대로24길 42 방주빌딩 (안암동5가)</span>
+                                                            <span class="info_openoff">
+                        <span class="tag_openoff">영업중</span>
+                        <span class="txt_openoff"> 00:00 ~ 24:00</span>
+                    </span>
+
+
+
+                                        </span></a><a href="tel:02-6229-3400" class="num_phone"><span class="screen_out">TEL</span>02-6229-3400</a>                    <span class="tag_wrap"></span>
+
+
+            			<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_route">길찾기</a>
+
+			</span>
+            		</li>
+				</ul>
+
+		<a href="javascript:;" class="link_more" data-type="place" data-page="1" data-morepage="2"><span class="screen_out">장소</span>더보기</a>
+
+
+			</div>
+
+    	<div class="search_result_bus_body hide">
+
+	<h4 class="tit_result">버스정류장</h4>	<ul id="busStopList" class="list_result">
+    			<li class="search_item base" data-id="BS275067" data-type="busStop" data-wx="896099" data-wy="557423" data-title="맥도날드" data-ismarker="true" data-cpg="1,1,1">
+			<a href="javascript:;" class="link_result">
+				<span class="txt_tit">
+					<strong class="tit_g">맥도날드</strong>
+				</span>
+				<span class="txt_g"><span class="screen_out">버스 정류장 번호 : </span>1056<span class="txt_bar">|</span>식량과학원사거리 방면</span>
+                <span class="txt_ginfo">경남 밀양시 내이동</span><!-- span 태그 추가 및 위치 변경 -->
+                <span class="info_bus">
+					<em class="screen_out">정차 버스 안내 : </em>
+										<span class="bus_type no0106">일반</span>
+									</span>
+			</a>
+						<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_route">길찾기</a>
+			</span>
+					</li>
+		</ul>
+        <div class="no_more_space"></div>
+
+
+	<h4 class="tit_result">버스번호</h4>	<ul id="busList" class="list_result">
+    			<li class="search_item base" data-id="B34021" data-type="bus" data-title="4" data-ismarker="false" data-cpg="1,3,1">
+			<a href="javascript:;" class="link_result">
+				<span class="txt_tit">
+					<span class="bus_type no0106">일반</span><span class="screen_out">버스</span>
+					<strong class="tit_g">4</strong>
+				</span>
+				<span class="txt_g"><span class="screen_out">버스지역 : </span>경남<span class="txt_bar">|</span><span class="screen_out">출발지 및 도착지 정보 : </span>밀양역(종점)<span class="ico_comm ico_course">↔</span>식량과학원사거리</span>
+			</a>
+						<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_app" target="_blank">카카오맵</a>
+			</span>
+								</li>
+			<li class="search_item base" data-id="B61025" data-type="bus" data-title="4-1" data-ismarker="false" data-cpg="1,3,2">
+			<a href="javascript:;" class="link_result">
+				<span class="txt_tit">
+					<span class="bus_type no0106">일반</span><span class="screen_out">버스</span>
+					<strong class="tit_g">4-1</strong>
+				</span>
+				<span class="txt_g"><span class="screen_out">버스지역 : </span>경남<span class="txt_bar">|</span><span class="screen_out">출발지 및 도착지 정보 : </span>밀양역(종점)<span class="ico_comm ico_course">↔</span>시청서문</span>
+			</a>
+						<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_app" target="_blank">카카오맵</a>
+			</span>
+								</li>
+			<li class="search_item base" data-id="B34082" data-type="bus" data-title="4-1 (밀성고등학교)" data-ismarker="false" data-cpg="1,3,3">
+			<a href="javascript:;" class="link_result">
+				<span class="txt_tit">
+					<span class="bus_type no0106">일반</span><span class="screen_out">버스</span>
+					<strong class="tit_g">4-1 (밀성고등학교)</strong>
+				</span>
+				<span class="txt_g"><span class="screen_out">버스지역 : </span>경남<span class="txt_bar">|</span><span class="screen_out">출발지 및 도착지 정보 : </span>밀양역(종점)<span class="ico_comm ico_course">↔</span>시청</span>
+			</a>
+						<span class="result_btn_wrap">
+                <a href="javascript:;" class="link_box link_map">지도</a>
+                <a href="javascript:;" class="link_box link_app" target="_blank">카카오맵</a>
+			</span>
+								</li>
+		</ul>
+    	<a href="javascript:;" class="link_more" data-type="bus" data-page="1" data-morepage="1"><span class="screen_out">버스 번호</span>더보기</a>
+
+
+			</div>
+    </div>
+<script type="text/javascript">
+function initSearchViewPageData(){
+    var dataList = [];
+
+
+
+            var roadviewData = null,
+            publicMask = null,
+            isPublicMask = false;
+                                            roadviewData = {
+                    panoid : '',
+                    wphotox : '',
+                    wphotoy : '',
+                    pan : '',
+                    tilt : '',
+                    zoom : ''
+                };
+                                                                publicMask = null;
+                isPublicMask = false;
+                        dataList.push({
+                id : '11902329',
+                source_id : '',
+                source : '', //subway인지 일반장소인지
+                name : '맥도날드 서울시청점',
+                point_wx : '495443',
+                point_wy : '1129806',
+                type : 'place',
+                roadviewYN : 'Y',
+                roadviewData : roadviewData,
+                storeviewYN : 'N',
+                storeviewData : '',
+                isLine : false,
+                isRealestatePoly :false,
+                isMarker : true,
+                isMarkerDefaultHidden : false,
+                isPublicMask : isPublicMask,
+                publicMask: publicMask,
+                                cpg : '1,15,1'
+            });
+                                    roadviewData = {
+                    panoid : '',
+                    wphotox : '',
+                    wphotoy : '',
+                    pan : '',
+                    tilt : '',
+                    zoom : ''
+                };
+                                                                publicMask = null;
+                isPublicMask = false;
+                        dataList.push({
+                id : '12674579',
+                source_id : '',
+                source : '', //subway인지 일반장소인지
+                name : '맥도날드 명동점',
+                point_wx : '496583',
+                point_wy : '1129068',
+                type : 'place',
+                roadviewYN : 'Y',
+                roadviewData : roadviewData,
+                storeviewYN : 'N',
+                storeviewData : '',
+                isLine : false,
+                isRealestatePoly :false,
+                isMarker : true,
+                isMarkerDefaultHidden : false,
+                isPublicMask : isPublicMask,
+                publicMask: publicMask,
+                                cpg : '1,15,2'
+            });
+                                    roadviewData = {
+                    panoid : '',
+                    wphotox : '',
+                    wphotoy : '',
+                    pan : '',
+                    tilt : '',
+                    zoom : ''
+                };
+                                                                publicMask = null;
+                isPublicMask = false;
+                        dataList.push({
+                id : '8350550',
+                source_id : '',
+                source : '', //subway인지 일반장소인지
+                name : '맥도날드 종로3점',
+                point_wx : '497893',
+                point_wy : '1130840',
+                type : 'place',
+                roadviewYN : 'Y',
+                roadviewData : roadviewData,
+                storeviewYN : 'N',
+                storeviewData : '',
+                isLine : false,
+                isRealestatePoly :false,
+                isMarker : true,
+                isMarkerDefaultHidden : false,
+                isPublicMask : isPublicMask,
+                publicMask: publicMask,
+                                cpg : '1,15,3'
+            });
+                                    roadviewData = {
+                    panoid : '',
+                    wphotox : '',
+                    wphotoy : '',
+                    pan : '',
+                    tilt : '',
+                    zoom : ''
+                };
+                                                                publicMask = null;
+                isPublicMask = false;
+                        dataList.push({
+                id : '18938863',
+                source_id : '',
+                source : '', //subway인지 일반장소인지
+                name : '맥도날드 명동2호점',
+                point_wx : '496615',
+                point_wy : '1128073',
+                type : 'place',
+                roadviewYN : 'Y',
+                roadviewData : roadviewData,
+                storeviewYN : 'N',
+                storeviewData : '',
+                isLine : false,
+                isRealestatePoly :false,
+                isMarker : true,
+                isMarkerDefaultHidden : false,
+                isPublicMask : isPublicMask,
+                publicMask: publicMask,
+                                cpg : '1,15,4'
+            });
+                                    roadviewData = {
+                    panoid : '',
+                    wphotox : '',
+                    wphotoy : '',
+                    pan : '',
+                    tilt : '',
+                    zoom : ''
+                };
+                                                                publicMask = null;
+                isPublicMask = false;
+                        dataList.push({
+                id : '10346282',
+                source_id : '',
+                source : '', //subway인지 일반장소인지
+                name : '맥도날드 서울역점',
+                point_wx : '493507',
+                point_wy : '1126435',
+                type : 'place',
+                roadviewYN : 'Y',
+                roadviewData : roadviewData,
+                storeviewYN : 'N',
+                storeviewData : '',
+                isLine : false,
+                isRealestatePoly :false,
+                isMarker : true,
+                isMarkerDefaultHidden : false,
+                isPublicMask : isPublicMask,
+                publicMask: publicMask,
+                                cpg : '1,15,5'
+            });
+                                    roadviewData = {
+                    panoid : '',
+                    wphotox : '',
+                    wphotoy : '',
+                    pan : '',
+                    tilt : '',
+                    zoom : ''
+                };
+                                                                publicMask = null;
+                isPublicMask = false;
+                        dataList.push({
+                id : '8291988',
+                source_id : '',
+                source : '', //subway인지 일반장소인지
+                name : '맥도날드 대학로점',
+                point_wx : '500464',
+                point_wy : '1134253',
+                type : 'place',
+                roadviewYN : 'Y',
+                roadviewData : roadviewData,
+                storeviewYN : 'N',
+                storeviewData : '',
+                isLine : false,
+                isRealestatePoly :false,
+                isMarker : true,
+                isMarkerDefaultHidden : false,
+                isPublicMask : isPublicMask,
+                publicMask: publicMask,
+                                cpg : '1,15,6'
+            });
+                                    roadviewData = {
+                    panoid : '',
+                    wphotox : '',
+                    wphotoy : '',
+                    pan : '',
+                    tilt : '',
+                    zoom : ''
+                };
+                                                                publicMask = null;
+                isPublicMask = false;
+                        dataList.push({
+                id : '21253166',
+                source_id : '',
+                source : '', //subway인지 일반장소인지
+                name : '맥도날드 성균관대점',
+                point_wx : '499752',
+                point_wy : '1134402',
+                type : 'place',
+                roadviewYN : 'Y',
+                roadviewData : roadviewData,
+                storeviewYN : 'N',
+                storeviewData : '',
+                isLine : false,
+                isRealestatePoly :false,
+                isMarker : true,
+                isMarkerDefaultHidden : false,
+                isPublicMask : isPublicMask,
+                publicMask: publicMask,
+                                cpg : '1,15,7'
+            });
+                                    roadviewData = {
+                    panoid : '',
+                    wphotox : '',
+                    wphotoy : '',
+                    pan : '',
+                    tilt : '',
+                    zoom : ''
+                };
+                                                                publicMask = null;
+                isPublicMask = false;
+                        dataList.push({
+                id : '371363260',
+                source_id : '',
+                source : '', //subway인지 일반장소인지
+                name : '맥도날드 홍제역점',
+                point_wx : '487775',
+                point_wy : '1135860',
+                type : 'place',
+                roadviewYN : 'Y',
+                roadviewData : roadviewData,
+                storeviewYN : 'N',
+                storeviewData : '',
+                isLine : false,
+                isRealestatePoly :false,
+                isMarker : true,
+                isMarkerDefaultHidden : false,
+                isPublicMask : isPublicMask,
+                publicMask: publicMask,
+                                cpg : '1,15,8'
+            });
+                                    roadviewData = {
+                    panoid : '',
+                    wphotox : '',
+                    wphotoy : '',
+                    pan : '',
+                    tilt : '',
+                    zoom : ''
+                };
+                                                                publicMask = null;
+                isPublicMask = false;
+                        dataList.push({
+                id : '18606733',
+                source_id : '',
+                source : '', //subway인지 일반장소인지
+                name : '맥도날드 연세대점',
+                point_wx : '486027',
+                point_wy : '1127514',
+                type : 'place',
+                roadviewYN : 'Y',
+                roadviewData : roadviewData,
+                storeviewYN : 'N',
+                storeviewData : '',
+                isLine : false,
+                isRealestatePoly :false,
+                isMarker : true,
+                isMarkerDefaultHidden : false,
+                isPublicMask : isPublicMask,
+                publicMask: publicMask,
+                                cpg : '1,15,9'
+            });
+                                    roadviewData = {
+                    panoid : '',
+                    wphotox : '',
+                    wphotoy : '',
+                    pan : '',
+                    tilt : '',
+                    zoom : ''
+                };
+                                                                publicMask = null;
+                isPublicMask = false;
+                        dataList.push({
+                id : '457867179',
+                source_id : '',
+                source : '', //subway인지 일반장소인지
+                name : '맥도날드 동묘점',
+                point_wx : '503342',
+                point_wy : '1131564',
+                type : 'place',
+                roadviewYN : 'Y',
+                roadviewData : roadviewData,
+                storeviewYN : 'N',
+                storeviewData : '',
+                isLine : false,
+                isRealestatePoly :false,
+                isMarker : true,
+                isMarkerDefaultHidden : false,
+                isPublicMask : isPublicMask,
+                publicMask: publicMask,
+                                cpg : '1,15,10'
+            });
+                                    roadviewData = {
+                    panoid : '',
+                    wphotox : '',
+                    wphotoy : '',
+                    pan : '',
+                    tilt : '',
+                    zoom : ''
+                };
+                                                                publicMask = null;
+                isPublicMask = false;
+                        dataList.push({
+                id : '10338297',
+                source_id : '',
+                source : '', //subway인지 일반장소인지
+                name : '맥도날드 삼선점',
+                point_wx : '501668',
+                point_wy : '1136053',
+                type : 'place',
+                roadviewYN : 'Y',
+                roadviewData : roadviewData,
+                storeviewYN : 'N',
+                storeviewData : '',
+                isLine : false,
+                isRealestatePoly :false,
+                isMarker : true,
+                isMarkerDefaultHidden : false,
+                isPublicMask : isPublicMask,
+                publicMask: publicMask,
+                                cpg : '1,15,11'
+            });
+                                    roadviewData = {
+                    panoid : '',
+                    wphotox : '',
+                    wphotoy : '',
+                    pan : '',
+                    tilt : '',
+                    zoom : ''
+                };
+                                                                publicMask = null;
+                isPublicMask = false;
+                        dataList.push({
+                id : '14536202',
+                source_id : '',
+                source : '', //subway인지 일반장소인지
+                name : '맥도날드 공덕점',
+                point_wx : '488307',
+                point_wy : '1122690',
+                type : 'place',
+                roadviewYN : 'Y',
+                roadviewData : roadviewData,
+                storeviewYN : 'N',
+                storeviewData : '',
+                isLine : false,
+                isRealestatePoly :false,
+                isMarker : true,
+                isMarkerDefaultHidden : false,
+                isPublicMask : isPublicMask,
+                publicMask: publicMask,
+                                cpg : '1,15,12'
+            });
+                                    roadviewData = {
+                    panoid : '',
+                    wphotox : '',
+                    wphotoy : '',
+                    pan : '',
+                    tilt : '',
+                    zoom : ''
+                };
+                                                                publicMask = null;
+                isPublicMask = false;
+                        dataList.push({
+                id : '16988033',
+                source_id : '',
+                source : '', //subway인지 일반장소인지
+                name : '맥도날드 이태원점',
+                point_wx : '497724',
+                point_wy : '1120699',
+                type : 'place',
+                roadviewYN : 'Y',
+                roadviewData : roadviewData,
+                storeviewYN : 'N',
+                storeviewData : '',
+                isLine : false,
+                isRealestatePoly :false,
+                isMarker : true,
+                isMarkerDefaultHidden : false,
+                isPublicMask : isPublicMask,
+                publicMask: publicMask,
+                                cpg : '1,15,13'
+            });
+                                    roadviewData = {
+                    panoid : '',
+                    wphotox : '',
+                    wphotoy : '',
+                    pan : '',
+                    tilt : '',
+                    zoom : ''
+                };
+                                                                publicMask = null;
+                isPublicMask = false;
+                        dataList.push({
+                id : '26308146',
+                source_id : '',
+                source : '', //subway인지 일반장소인지
+                name : '맥도날드 명지대점',
+                point_wx : '483381',
+                point_wy : '1133446',
+                type : 'place',
+                roadviewYN : 'Y',
+                roadviewData : roadviewData,
+                storeviewYN : 'N',
+                storeviewData : '',
+                isLine : false,
+                isRealestatePoly :false,
+                isMarker : true,
+                isMarkerDefaultHidden : false,
+                isPublicMask : isPublicMask,
+                publicMask: publicMask,
+                                cpg : '1,15,14'
+            });
+                                    roadviewData = {
+                    panoid : '',
+                    wphotox : '',
+                    wphotoy : '',
+                    pan : '',
+                    tilt : '',
+                    zoom : ''
+                };
+                                                                publicMask = null;
+                isPublicMask = false;
+                        dataList.push({
+                id : '21324889',
+                source_id : '',
+                source : '', //subway인지 일반장소인지
+                name : '맥도날드 안암점',
+                point_wx : '506462',
+                point_wy : '1134681',
+                type : 'place',
+                roadviewYN : 'Y',
+                roadviewData : roadviewData,
+                storeviewYN : 'N',
+                storeviewData : '',
+                isLine : false,
+                isRealestatePoly :false,
+                isMarker : true,
+                isMarkerDefaultHidden : false,
+                isPublicMask : isPublicMask,
+                publicMask: publicMask,
+                                cpg : '1,15,15'
+            });
+                xe.mapBuilder.setDataModel(dataList, 'place');
+        dataList = [];
+                            dataList.push({
+                id : 'B34021',
+                name : '4',
+                type : 'bus',
+                isMarker : true,
+                isMarkerDefaultHidden : true,
+                cpg : '1,3,1'
+            });
+                    dataList.push({
+                id : 'B61025',
+                name : '4-1',
+                type : 'bus',
+                isMarker : true,
+                isMarkerDefaultHidden : true,
+                cpg : '1,3,2'
+            });
+                    dataList.push({
+                id : 'B34082',
+                name : '4-1 (밀성고등학교)',
+                type : 'bus',
+                isMarker : true,
+                isMarkerDefaultHidden : true,
+                cpg : '1,3,3'
+            });
+                xe.mapBuilder.setDataModel(dataList, 'bus');
+        dataList = [];
+                            dataList.push({
+                id : 'BS275067',
+                name : '맥도날드',
+                POINT_W_X : '896099',
+                POINT_W_Y : '557423',
+                type : 'busStop',
+                isMarker : true,
+                isMarkerDefaultHidden : false,
+                cpg : '1,1,1'
+            });
+                xe.mapBuilder.setDataModel(dataList, 'busStop');
+    }
+</script>
+		</div>
+
+				<div class="info_topPanel" style="display:none;">
+    <div class="info_tit">
+        <h3 class="tit_location"></h3>
+        <span class="txt_date"></span>
+        <div class="choice_opt opt_type1">
+            <span class="screen_out">스토어 내부 이동</span>
+            <div class="opt_map opt_state">
+                <div class="inner_opt">
+                    <select class="opt_select" id="depth1Select"></select>
+                    <span class="txt_selected" aria-hidden="true"></span>
+                    <span class="box_arrow"><span class="ico_traffic ico_arrow"></span></span>
+                </div>
+            </div>
+        </div>
+        </div>
+    <a href="javascript:;" class="link_rvBtn link_rvMap">지도</a>
+        </div>
+<div class="content_map">
+    <h2 class="screen_out">지도 홈</h2>
+<div class="map_area hide">
+    <button type="button" class="btn_update hide">
+        <span class="ico_comm"></span><span class="txt_btn">이 지역 재검색</span>
+    </button>
+    <div class="wrap_tit">
+        <strong class="tit_location">서울 종로구 사직동</strong>
+    </div>
+	<div class="videoWrap"><video id="cctvVideo"></video></div>
+	<div id="maps" style="position: relative; overflow: hidden; background: url(&quot;https://t1.daumcdn.net/mapjsapi/images/bg_tile.png&quot;); height: 1193px;"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; touch-action: none; cursor: url(&quot;https://t1.daumcdn.net/mapjsapi/images/cursor/openhand.cur.ico&quot;) 7 5, url(&quot;https://t1.daumcdn.net/mapjsapi/images/cursor/openhand.cur.ico&quot;), default;"><div style="position: absolute;"><div style="position: absolute; z-index: 1; left: 0px; top: 0px;"><img src="https://map.daumcdn.net/map_k3f_prod/bakery/image_map_png/PNGSD01/v16_260kk/1/8010/3559.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -76px; top: -27px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"></div><div style="position: absolute; z-index: 0; left: 0px; top: 0px;"><img src="https://map.daumcdn.net/map_k3f_prod/bakery/image_map_png/PNGSD01/v16_260kk/1/8010/3559.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -76px; top: -27px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"></div><div style="position: absolute; z-index: 1;"></div><div style="width: 0px; height: 0px; position: absolute; z-index: 1;"></div><div style="position: absolute; z-index: 1;"><svg version="1.1" style="stroke: none; stroke-dashoffset: 0.5; stroke-linejoin: round; fill: none; transform: translateZ(0px); position: absolute; width: 0px; height: 0px; left: 0px; top: 0px;" viewBox="0 0 0 0"><defs></defs></svg></div><div style="position: absolute; z-index: 1; width: 100%; height: 0px; transform: translateZ(0px);"></div></div></div><div style="position: absolute; cursor: default; z-index: 1; margin: 0px 6px; height: 19px; line-height: 14px; left: 0px; bottom: 0px; color: rgb(0, 0, 0);"><div style="color: rgb(0, 0, 0); text-align: center; font-size: 10px; float: right; display: none;"><div style="float: left; margin: 2px 3px 0px 4px; height: 6px; transition: width 0.1s ease 0s; border-top: none rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); border-bottom: 2px solid rgb(0, 0, 0); border-left: 2px solid rgb(0, 0, 0); border-image: initial; width: 76px;"></div><div style="float: left; margin: 0px 4px 0px 0px; font-family: AppleSDGothicNeo-Regular, 돋움, dotum, sans-serif; font-weight: bold; color: rgb(0, 0, 0);">20m</div></div><div style="margin: 0px 4px; float: right;"><a target="_blank" href="http://map.kakao.com/" title="Kakao 지도로 보시려면 클릭하세요." style="float: left; width: 32px; height: 10px;"><img src="https://t1.daumcdn.net/mapjsapi/images/m_bi_b.png" alt="Kakao 지도로 이동" style="float: left; width: 32px; height: 10px; border: none;"></a><div style="font: 11px / 11px Arial, Tahoma, Dotum, sans-serif; float: left;"></div></div></div><div style="cursor: auto; position: absolute; z-index: 2; left: 0px; top: 0px;"></div></div>	<div class="set_map control_map">
+		<button type="button" class="btn_control mctr_nowpos">
+            <span class="ico_comm ico_now">현위치</span>
+            <div class="nowpos_spinner_wrap">
+                <div class="spinner_wrapper">
+                    <div class="spinner_main">
+                        <div class="spinner_left">
+                            <div class="half_circle"></div>
+                        </div>
+                        <div class="spinner_right">
+                            <div class="half_circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </button>
+		<button type="button" class="btn_control btn_zoomin mctr_zoomin"><span class="ico_comm ico_zoomin">확대</span></button>
+		<button type="button" class="btn_control btn_zoomout mctr_zoomout"><span class="ico_comm ico_zoomout">축소</span></button>
+	</div>
+
+	        <div class="set_map view_map">
+            <button type="button" class="btn_control mctr_roadview"><span class="ico_comm ico_roadview">로드뷰 보기</span></button>            <button type="button" class="btn_control mctr_optlayer"><span class="ico_comm ico_layer">지도 설정 레이어</span></button>            <button type="button" class="btn_control mctr_fullscreen"><span class="ico_comm ico_all">전체보기</span></button>        </div>
+
+	</div>    <div id="roadview" style="height:480px;display:none;"></div>
+</div>
+	</article>
+
+    <div class="floating_bnr hide" style="display: block;">
+    <div class="inner_floating">
+        <a href="#none" class="link_floating">카카오맵 열기</a>
+        <a href="#none" class="btn_close"><span class="ico_path ico_close">플로팅 배너 닫기</span></a>
+    </div>
+</div>
+    <div class="dimmed_layer" style="height: 1281px; min-height: 1281px;"></div>
+    <div class="map_layer hide">
+    <div class="inner_map_layer inner_map_layer1">
+        <div class="layer_head">
+            <strong class="tit_map">지도설정</strong>
+        </div>
+        <div class="layer_body">
+            <div class="bundle_select">
+				<div class="select_scroll">
+                    <span class="select_type on">
+                        지도
+                        <button type="button" class="btn_set mctr_roadmap ico_comm">선택</button>
+                    </span>
+                    <span class="select_type">
+                        스카이뷰
+                        <button type="button" class="btn_set mctr_skyview ico_comm">해제</button>
+                    </span>
+					<span class="select_type">
+						실시간교통
+						<button type="button" class="btn_set mctr_realtraffic"><span class="ico_comm"></span></button>					</span>
+                    <span class="select_type">
+						지적편집도
+						<button type="button" class="btn_set mctr_district"><span class="ico_comm"></span></button>
+					</span>
+                    <span class="select_type">
+						지형도
+						<button type="button" class="btn_set mctr_terrain"><span class="ico_comm"></span></button>
+					</span>
+                    <span class="select_type">
+						CCTV
+						<button type="button" class="btn_set mctr_cctv"><span class="ico_comm"></span></button>
+					</span>
+					<span class="select_type">
+						사고·공사
+						<button type="button" class="btn_set mctr_trouble"><span class="ico_comm"></span></button>
+					</span>
+					<span class="select_type">
+						법정경계
+						<button type="button" class="btn_set mctr_bbound"><span class="ico_comm"></span></button>
+					</span>
+					<span class="select_type">
+						행정경계
+						<button type="button" class="btn_set mctr_hbound"><span class="ico_comm"></span></button>
+					</span>
+                    <span class="select_type">
+						자전거
+						<button type="button" class="btn_set mctr_bicycle"><span class="ico_comm"></span></button>
+					</span>
+                </div>
+            </div>
+        </div>
+        <div class="layer_foot">
+            <a href="javascript:;" class="btn_close mctr_optclose"><span class="ico_comm">지도 설정 레이어 닫기</span></a>
+        </div>
+    </div>
+</div>
+	<div class="footer_wrap hide" id="footerWrap" style="display: block;">
+
+    <a href="javascript:;" class="link_top"><span class="ico_traffic ico_top"></span>맨 위로</a>	<div id="daumFoot" role="contentinfo">
+            <small class="copr_info"><a href="http://m.kakaocorp.com/main" class="link_kakaocorp"><span class="ico_copyright">©</span>Kakao</a></small>        <ul class="list_foot">
+            <li><a href="https://cs.kakao.com/requests?locale=ko&amp;service=101" class="link_footer">고객센터</a></li>
+            <li><a href="#" class="link_footer link_login">로그인</a></li>
+        </ul>
+
+	</div>
+
+</div></div>
+<script type="text/javascript" src="//t1.daumcdn.net/tiara/js/v1/tiara.min.js"></script>
+<script type="text/javascript">
+xe.mmapContextPath = '';
+xe.mrankType = '';
+xe.startMapView = false;
+xe.startRoadview = false;
+xe.needNowPosition = false;
+xe.extService = false;
+xe.hideFooter = false;
+xe.isErrorPage = false;
+xe.pageName = 'searchView';
+xe.pageCategory = 'search';
+xe.isDaumMapApp = false;
+xe.isDebug = false;
+xe.isSmallMap = false;
+xe.activeEventMarker = false;
+
+
+var isDev = 'PROD' !== 'PROD';
+var svcdomain = isDev ? 'dev.m.map.kakao.com' : 'm.map.kakao.com';
+var deploymentType = isDev ? 'dev' : 'production';
+try {
+    TiaraTracker.getInstance()
+        .setSvcDomain(svcdomain)
+        .trackPage(xe.pageName)
+        .setDeployment(deploymentType)
+        .track();
+} catch(e) {}
+</script>
+<script type="text/javascript">
+var xe = xe || {};
+xe.ENV = 'PROD';
+</script>
+<script type="text/javascript" src="//ssl.daumcdn.net/dmaps/map_js_init/v3.js"></script><script src="https://t1.daumcdn.net/mapjsapi/js/main/4.4.14/v3.js"></script>
+<script type="text/javascript" src="//mk.kakaocdn.net/dn/platformfe/agent/v2_2_0/agent.js"></script>
+
+
+<script type="text/javascript" src="//t1.daumcdn.net/mmapweb/jscss_kakaomap/newmmap.min.202308311330873.js"></script>
+
+<script async="" type="text/javascript" charset="utf-8" src="//t1.daumcdn.net/kas/static/ba.min.js"></script>
+
+
+
+
+</body></html>
