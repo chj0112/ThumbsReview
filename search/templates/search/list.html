@@ -17,6 +17,13 @@
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
     </div>
+    {% for store in store_list %}
+        <p>{{ store.id }}</p>
+        <p>{{ store.title }}</p>
+        <p>{{ store.phone }}</p>
+        <img src="{{ store.img }}" width="150" height="170">
+        <p>{{ store.addr }}</p>
+    {% endfor %}
 
 </body>
 </html>
