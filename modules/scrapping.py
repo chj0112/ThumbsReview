@@ -6,6 +6,17 @@ from urllib.error import URLError
 import requests
 from bs4 import BeautifulSoup
 
+import time
+
+from selenium import webdriver
+
+from bs4 import BeautifulSoup
+import re
+import math
+
+from selenium.webdriver import Keys
+from selenium.webdriver.common.by import By
+
 
 def kakao(search):
     url = urllib.parse.quote("https://m.map.kakao.com/actions/searchView?q=" + search + "&wxEnc=LVSOTP&wyEnc=QNLTTMN&lvl=4", safe=':/?=&')
@@ -44,3 +55,86 @@ def kakao(search):
 
     print(store_list)
     return store_list
+
+
+def review(store_id):
+    # Chrome 창 숨기기
+    options = webdriver.ChromeOptions()
+    options.add_argument('headless')
+
+    driver = webdriver.Chrome(options=options)
+
+    # 카카오맵 URL (PC버전)
+    # url = 'https://place.map.kakao.com/m/2141491711#comment'
+    url = 'https://place.map.kakao.com/' + str(store_id) + '#comment'
+
+    driver.get(url)
+
+    reviews = []
+
+    last_height = driver.execute_script("return document.body.scrollHeight")
+
+    while True:
+
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+        time.sleep(0.5)
+
+        # 스크롤 다운 후 스크롤 높이 다시 가져옴
+        new_height = driver.execute_script("return document.body.scrollHeight")
+        if new_height == last_height:
+            break
+        last_height = new_height
+
+        tmp = driver.page_source
+        tmp2 = BeautifulSoup(tmp, "html.parser")
+
+        total_reviews = int(
+            tmp2.select('#mArticle > div.cont_evaluation > strong.total_evaluation > span')[0].get_text())
+        pages = math.ceil(total_reviews / 5)
+        print(pages)
+        time.sleep(0.5)
+
+    for i in range(1, pages + 1):
+
+        i = i + 1
+
+        if i > pages:
+            break
+
+        # 후기 더보기 버튼 클릭
+        # next_page = driver.find_element(By.XPATH, "//a[@data-page='" + str(i) + "']")
+        next_page = driver.find_element(By.CSS_SELECTOR, '#mArticle > div.cont_evaluation > div.evaluation_review > a')
+        next_page.send_keys(Keys.ENTER)
+        time.sleep(0.5)
+
+    t1 = driver.page_source
+    t2 = BeautifulSoup(t1, "html.parser")
+    t3 = t2.find(name="div", attrs={"class": "evaluation_review"})
+
+    review_all = t3.find_all('p', {'class': 'txt_comment'})
+
+    reviews.extend(review_all)
+
+    driver.close()
+
+    str_reviews = list(map(str, reviews))
+    print(str_reviews)
+
+    p = re.compile('<span>(.*)</span>')
+    filtered_reviews = []
+    for r in str_reviews:
+        review = p.findall(r)[0]
+        if review != '':
+            # review = review.replace('<br/>', '\n')
+            review = review.replace('\t', ' ')
+            filtered_reviews.append(review)
+
+    f = open('modules/input.tsv', 'w')
+    f.write('\treview\n')
+    for i in range(len(filtered_reviews)):
+        data = str(i) + '\t' + filtered_reviews[i] + '\n'
+        f.write(data)
+    f.close()
+
+    return 'test'

@@ -127,7 +127,9 @@
 <header data-bs-theme="dark">
 <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container">
-    <m1>Thumbs Review</m1>
+    <a href="/">
+        <m1>Thumbs Review</m1>
+    </a>
   </div>
 </header>
 
@@ -160,7 +162,7 @@
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn-url" onclick="location.href='/test/{{ store.id }}'">more details</button>
+                  <button type="button" class="btn-url" onclick="location.href='/{{ store.id }}'">more details</button>
                 </div>
                 <small class="text-body-secondary">{{ store.phone }}</small>
               </div>

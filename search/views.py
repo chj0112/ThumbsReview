@@ -2,6 +2,7 @@ from django.shortcuts import render
 from modules import scrapping
 
 
+
 # Create your views here.
 def main(request):
     return render(request, 'search/main.html')
@@ -27,3 +28,17 @@ def test(request):
 
 def kakao(request):
     return render(request, 'search/kakao.html')
+
+
+def store(request, store_id):
+    store_name = scrapping.review(store_id)
+    # model('input.tsv')
+    f = open('modules/output.tsv', 'r')
+    f.readline()
+    reviews = []
+    for line in f:
+        tmp = []
+        tmp = line.split('\t')
+        print(tmp)
+        reviews.append({'review': tmp[1].replace('<br/>', '\n'), 'taste_r': tmp[2], 'taste_pn': tmp[3], 'service_r': tmp[4], 'service_pn': tmp[5].replace('\n', '')})
+    return render(request, 'search/store.html', {'store_name': store_name, 'reviews': reviews})
