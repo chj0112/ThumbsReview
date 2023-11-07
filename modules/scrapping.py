@@ -10,8 +10,6 @@ import time
 
 from selenium import webdriver
 
-from bs4 import BeautifulSoup
-import re
 import math
 
 from selenium.webdriver import Keys
@@ -48,7 +46,7 @@ def kakao(search):
         # store_dict['img'] = img_text
         # store_dict['addr'] = addr_text
         # print(store_dict)
-        # 가게 ID, 가게 이름, 가게 전화번호, 대표 이미지, 주소
+        # 가게 ID, 가게 이름, 가게 전화번호(제거), 대표 이미지, 주소
         # store_list.append([store.attrs['data-id'], store.attrs['data-title'], store.attrs['data-phone'], img_text, addr_text])
         store_list.append({'id': store.attrs['data-id'], 'title': store.attrs['data-title'], 'img': img_text, 'addr': addr_text})
         print(store_list)
@@ -107,9 +105,13 @@ def review(store_id):
         next_page = driver.find_element(By.CSS_SELECTOR, '#mArticle > div.cont_evaluation > div.evaluation_review > a')
         next_page.send_keys(Keys.ENTER)
         time.sleep(0.2)
+
     time.sleep(0.5)
     t1 = driver.page_source
     t2 = BeautifulSoup(t1, "html.parser")
+
+    store_name = t2.select_one('.tit_location').text
+
     t3 = t2.find(name="div", attrs={"class": "evaluation_review"})
 
     review_all = t3.find_all('p', {'class': 'txt_comment'})
@@ -130,11 +132,11 @@ def review(store_id):
             review = review.replace('\t', ' ')
             filtered_reviews.append(review)
 
-    f = open('modules/input.tsv', 'w',encoding='utf-8')
+    f = open('modules/input.tsv', 'w', encoding='utf-8')
     f.write('\treview\n')
     for i in range(len(filtered_reviews)):
         data = str(i) + '\t' + filtered_reviews[i] + '\n'
         f.write(data)
     f.close()
 
-    return 'test'
+    return store_name
