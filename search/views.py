@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from modules import scrapping
-
+from modules import test_h5
 
 
 # Create your views here.
@@ -33,7 +33,8 @@ def kakao(request):
 def store(request, store_id):
     store_name = scrapping.review(store_id)
     # model('input.tsv')
-    f = open('modules/output.tsv', 'r')
+    test_h5.Our_model('modules/input.tsv')
+    f = open('modules/output.tsv', 'r', encoding='utf-8')
     f.readline()
     reviews = []
     for line in f:

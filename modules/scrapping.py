@@ -50,7 +50,7 @@ def kakao(search):
         # print(store_dict)
         # 가게 ID, 가게 이름, 가게 전화번호, 대표 이미지, 주소
         # store_list.append([store.attrs['data-id'], store.attrs['data-title'], store.attrs['data-phone'], img_text, addr_text])
-        store_list.append({'id': store.attrs['data-id'], 'title': store.attrs['data-title'], 'phone': store.attrs['data-phone'], 'img': img_text, 'addr': addr_text})
+        store_list.append({'id': store.attrs['data-id'], 'title': store.attrs['data-title'], 'img': img_text, 'addr': addr_text})
         print(store_list)
 
     print(store_list)
@@ -78,7 +78,7 @@ def review(store_id):
 
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
-        time.sleep(0.5)
+        time.sleep(0.4)
 
         # 스크롤 다운 후 스크롤 높이 다시 가져옴
         new_height = driver.execute_script("return document.body.scrollHeight")
@@ -93,7 +93,7 @@ def review(store_id):
             tmp2.select('#mArticle > div.cont_evaluation > strong.total_evaluation > span')[0].get_text())
         pages = math.ceil(total_reviews / 5)
         print(pages)
-        time.sleep(0.5)
+        time.sleep(0.4)
 
     for i in range(1, pages + 1):
 
@@ -106,8 +106,8 @@ def review(store_id):
         # next_page = driver.find_element(By.XPATH, "//a[@data-page='" + str(i) + "']")
         next_page = driver.find_element(By.CSS_SELECTOR, '#mArticle > div.cont_evaluation > div.evaluation_review > a')
         next_page.send_keys(Keys.ENTER)
-        time.sleep(0.5)
-
+        time.sleep(0.2)
+    time.sleep(0.5)
     t1 = driver.page_source
     t2 = BeautifulSoup(t1, "html.parser")
     t3 = t2.find(name="div", attrs={"class": "evaluation_review"})
@@ -130,7 +130,7 @@ def review(store_id):
             review = review.replace('\t', ' ')
             filtered_reviews.append(review)
 
-    f = open('modules/input.tsv', 'w')
+    f = open('modules/input.tsv', 'w',encoding='utf-8')
     f.write('\treview\n')
     for i in range(len(filtered_reviews)):
         data = str(i) + '\t' + filtered_reviews[i] + '\n'

@@ -133,3 +133,7 @@ dmypy.json
 
 # DB migrations
 migrations/
+
+# IO
+modules/input.tsv
+modules/output.tsv
