@@ -37,9 +37,28 @@ def store(request, store_id):
     f = open('modules/output.tsv', 'r', encoding='utf-8')
     f.readline()
     reviews = []
+    taste_p, taste_n, taste_e, service_p, service_n, service_e = 0, 0, 0, 0, 0, 0
     for line in f:
         tmp = []
         tmp = line.split('\t')
         print(tmp)
-        reviews.append({'review': tmp[1].replace('<br/>', '\n'), 'taste_r': tmp[2], 'taste_pn': tmp[3], 'service_r': tmp[4], 'service_pn': tmp[5].replace('\n', '')})
-    return render(request, 'search/store.html', {'store_name': store_name, 'reviews': reviews})
+        last = tmp[5].replace('\n', '')
+
+        if tmp[2] == '1.0':
+            if tmp[3] == '1.0':
+                taste_p += 1
+            elif tmp[3] == '0.0':
+                taste_n += 1
+        else:
+            taste_e += 1
+
+        if tmp[4] == '1.0':
+            if last == '1.0':
+                service_p += 1
+            elif last == '0.0':
+                service_n += 1
+        else:
+            service_e += 1
+
+        reviews.append({'review': tmp[1].replace('<br/>', '\n'), 'taste_r': tmp[2], 'taste_pn': tmp[3], 'service_r': tmp[4], 'service_pn': last})
+    return render(request, 'search/store.html', {'store_name': store_name, 'reviews': reviews, 'taste_p': taste_p, 'taste_n': taste_n, 'taste_e': taste_e, 'service_p': service_p, 'service_n': service_n, 'service_e': service_e})
