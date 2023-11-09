@@ -62,3 +62,17 @@ def store(request, store_id):
 
         reviews.append({'review': tmp[1].replace('<br/>', '\n'), 'taste_r': tmp[2], 'taste_pn': tmp[3], 'service_r': tmp[4], 'service_pn': last})
     return render(request, 'search/store.html', {'store_name': store_name, 'reviews': reviews, 'taste_p': taste_p, 'taste_n': taste_n, 'taste_e': taste_e, 'service_p': service_p, 'service_n': service_n, 'service_e': service_e})
+
+
+def model_test(request):
+    value = request.GET['value']
+    fi = open('modules/input.tsv', 'w', encoding='utf-8')
+    fi.write('\treview\n')
+    fi.write('0\t' + value + '\n')
+    fi.close()
+    test_h5.Our_model('modules/input.tsv')
+    fo = open('modules/output.tsv', 'r', encoding='utf-8')
+    fo.readline()
+    result = fo.readline().split('\t')
+
+    return render(request, 'search/model_test.html', {'review': result[1].replace('<br/>', '\n'), 'taste_r': result[2], 'taste_pn': result[3], 'service_r': result[4], 'service_pn': result[5].replace('\n', '')})

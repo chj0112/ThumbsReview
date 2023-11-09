@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- 탭 이름 -->
-    <title>{{ store_name }} | ThumbsReview</title>
+    <title>ThumbsReview</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
@@ -134,6 +134,7 @@
         font-size: 50px;
         color: black;
       }
+
     </style>
     <!-- 차트 링크 -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -145,57 +146,40 @@
     <div class="navbar navbar-dark bg-dark shadow-sm">
         <div class="container">
             <m1><a href="/">Thumbs Review</a></m1>
-            <!-- 검색창 -->
-            <form class="d-flex" role="search" method="get" action="{% url 'list' %}">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-                       name="value">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+    <div class="text-bg-dark collapse" id="navbarHeader">
+        <div class="container">
+            <div class="row">
+                <p></p>
+                <p>모델을 체험해보세요!</p>
+                <div class="container-fluid">
+                    <form class="d-flex" role="search" method="get" action="{% url 'model_test' %}">
+                        <input class="form-control me-2" type="search" placeholder="내용을 입력하세요" aria-label="Search"
+                               name="value">
+                        <button class="btn btn-outline-success" type="submit">Run</button>
+                    </form>
+                </div>
+                <p></p>
+            </div>
         </div>
     </div>
 </header>
 
-<!-- 대문 -->
-<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
-    <div class="col-lg-6 col-md-8 mx-auto">
-        <div class="pb-3">
-            <h1 class="display-3 fw-bold"> {{ store_name }} </h1>
-        </div>
-        <div class="row">
-            <div class="col-md-6 themed-grid-col">
-                <div class="card">
-                    <sd1>맛</sd1>
-                    <div class="card-body">
-                        <canvas id="chDonut1"></canvas>
-                    </div>
-                </div>
-            </div>
+<!--확장 탭 기능 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-            <div class="col-md-6 themed-grid-col">
-                <div class="card">
-                    <sd1>서비스</sd1>
-                    <div class="card-body">
-                        <canvas id="chDonut2"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- 첫단 -->
-<div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-    <div class="my-3 p-3">
-        <h2 class="display-5">Review</h2>
-        <p class="lead">AI를 통해 분석된 평가를 빠르게 확인해보세요!</p>
-    </div>
-
-    {% for review in reviews %}
-    {% if review.taste_r == '1.0' or review.service_r == '1.0' %}
+<p></p>
+<div class="container">
     <div class="row featurette">
         <div class="col-md-7">
             <div class="row h-100 p-5 text-bg-dark rounded-3">
-                <p-review class="align-self-center">
-                    {{ review.review|linebreaksbr }}
+                <p-review class="align-self-center text-center">
+                    {{ review|linebreaksbr }}
                 </p-review>
             </div>
         </div>
@@ -205,7 +189,7 @@
                 <div class="row mb-3 text-center">
                     <sd1>맛</sd1>
                     <div class="col-6 themed-grid-col">
-                        {% if review.taste_r == '0.0' %}
+                        {% if taste_r == '0.0' %}
                         <!-- 중립 -->
                         <svg fill="#000000" viewBox="0 0 64 64" width="55" height="55"
                              xmlns="http://www.w3.org/2000/svg" stroke="#000000"
@@ -218,7 +202,7 @@
                                 </g>
                             </g>
                         </svg>
-                        {% elif review.taste_pn == '1.0' %}
+                        {% elif taste_pn == '1.0' %}
                         <!-- 맛이 좋아요 -->
                         <svg fill="#000000" viewBox="0 0 64 64" width="55" height="55"
                              xmlns="http://www.w3.org/2000/svg" stroke="#000000"
@@ -231,7 +215,7 @@
                                 </g>
                             </g>
                         </svg>
-                        {% elif review.taste_pn == '0.0' %}
+                        {% elif taste_pn == '0.0' %}
                         <!-- 맛이 별로예요 -->
                         <svg fill="#000000" viewBox="0 0 64 64" width="55" height="55"
                              xmlns="http://www.w3.org/2000/svg" stroke="#000000"
@@ -247,16 +231,16 @@
                         {% endif %}
                     </div>
                     <div class="col-6 themed-grid-col align-self-center">
-                        {% if review.taste_r == '0.0' %}
+                        {% if taste_r == '0.0' %}
                         <p-none>#모르겠어요</p-none>
-                        {% elif review.taste_pn == '1.0' %}
+                        {% elif taste_pn == '1.0' %}
                         <p-good>#맛있어요</p-good>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                              fill="currentColor"
                              class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
                             <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
                         </svg>
-                        {% elif review.taste_pn == '0.0' %}
+                        {% elif taste_pn == '0.0' %}
                         <p-bad>#별로예요</p-bad>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                              fill="currentColor"
@@ -270,7 +254,7 @@
                     <!-- 서비스 -->
                     <sd1>서비스</sd1>
                     <div class="col-6 themed-grid-col">
-                        {% if review.service_r == '0.0' %}
+                        {% if service_r == '0.0' %}
                         <!-- 중립 -->
                         <svg viewBox="0 0 15 15" fill="none" width="55" height="55"
                              xmlns="http://www.w3.org/2000/svg">
@@ -282,13 +266,13 @@
                                       fill="#000000"></path>
                             </g>
                         </svg>
-                        {% elif review.service_pn == '1.0' %}
+                        {% elif service_pn == '1.0' %}
                         <!-- 하트-->
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                              class="bi bi-heart" viewBox="0 0 16 16">
                             <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
                         </svg>
-                        {% elif review.service_pn == '0.0' %}
+                        {% elif service_pn == '0.0' %}
                         <!-- 깨진 하트 -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                              class="bi bi-heartbreak" viewBox="0 0 16 16">
@@ -297,16 +281,16 @@
                         {% endif %}
                     </div>
                     <div class="col-6 themed-grid-col align-self-center">
-                        {% if review.service_r == '0.0' %}
+                        {% if service_r == '0.0' %}
                         <p-none>#모르겠어요</p-none>
-                        {% elif review.service_pn == '1.0' %}
+                        {% elif service_pn == '1.0' %}
                         <p-good>#친절해요</p-good>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                              fill="currentColor"
                              class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
                             <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
                         </svg>
-                        {% elif review.service_pn == '0.0' %}
+                        {% elif service_pn == '0.0' %}
                         <p-bad>#아쉬워요</p-bad>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                              fill="currentColor"
@@ -329,94 +313,4 @@
     </div>
     <!-- 개행 -->
     <p></p>
-    {% endif %}
-    {% endfor %}
 </div>
-
-
-<!-- 도넛 차트 부트스트랩 -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-<!-- 도넛 차트 -->
-<script>
-
- // chart colors
-var colors = ['#FA5858', 'skyblue', 'grey','#c3e6cb','#dc3545','#6c757d'];
-
-/* 3 donut charts */
-var donutOptions = {
-  cutoutPercentage: 30, //도넛두께 : 값이 클수록 얇아짐
-  legend: {position:'bottom', padding:5, labels: {pointStyle:'circle', usePointStyle:true}, reverse:true},
-    tooltips: {enabled: false}
-};
-
-// donut 1
-var chDonutData1 = {
-    labels: ['맛없어요 ['+"{{ taste_n }}"+'개]', '맛있어요 ['+"{{ taste_p }}"+'개]'],
-    datasets: [
-      {
-        backgroundColor: colors.slice(0,2),
-        borderWidth: 0,
-        data: ["{{ taste_n }}", "{{ taste_p }}"]
-      }
-    ]
-};
-
-var chDonut1 = document.getElementById("chDonut1");
-  if (chDonut1) {
-    new Chart(chDonut1, {
-      type: 'pie',
-      data: chDonutData1,
-      options: donutOptions
-  });
-}
-
-// donut 2
-var chDonutData2 = {
-    labels: ['불친절해요 ['+"{{ service_n }}"+'개]', '친절해요 ['+"{{ service_p }}"+'개]'],
-    datasets: [
-      {
-        backgroundColor: colors.slice(0,2),
-        borderWidth: 0,
-        data: ["{{ service_n }}", "{{ service_p }}"]
-      }
-    ]
-};
-var chDonut2 = document.getElementById("chDonut2");
-  if (chDonut2) {
-    new Chart(chDonut2, {
-      type: 'pie',
-      data: chDonutData2,
-      options: donutOptions
-  });
-}
-
-// donut 3 사용X 지우면 오류.
-var chDonutData3 = {
-    labels: ['Angular', 'React', 'Other'],
-    datasets: [
-      {
-        backgroundColor: colors.slice(0,3),
-        borderWidth: 0,
-        data: [21, 45, 55, 33]
-      }
-    ]
-};
-var chDonut3 = document.getElementById("chDonut3");
-  if (chDonut3) {
-    new Chart(chDonut3, {
-      type: 'pie',
-      data: chDonutData3,
-      options: donutOptions
-  });
-}
-</script>
-</body>
-

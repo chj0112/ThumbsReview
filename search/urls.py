@@ -26,5 +26,6 @@ urlpatterns = [
     path('info', views.info),
     path('test', views.test),
     path('kakao', views.kakao),
-    path('<int:store_id>', views.store)
+    path('<int:store_id>', views.store),
+    path('model-test', views.model_test, name='model_test')
 ]
